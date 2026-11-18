@@ -1,0 +1,316 @@
+/* ibm-plex-sans-condensed-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans Condensed';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./fonts/ibm-plex-sans-condensed-v15-latin/ibm-plex-sans-condensed-v15-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-sans-condensed-200italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans Condensed';
+  font-style: italic;
+  font-weight: 200;
+  src: url('./fonts/ibm-plex-sans-condensed-v15-latin/ibm-plex-sans-condensed-v15-latin-200italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-sans-condensed-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/ibm-plex-sans-condensed-v15-latin/ibm-plex-sans-condensed-v15-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-sans-condensed-300italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: url('./fonts/ibm-plex-sans-condensed-v15-latin/ibm-plex-sans-condensed-v15-latin-300italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-sans-condensed-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/ibm-plex-sans-condensed-v15-latin/ibm-plex-sans-condensed-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-sans-condensed-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans Condensed';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./fonts/ibm-plex-sans-condensed-v15-latin/ibm-plex-sans-condensed-v15-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-sans-condensed-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans Condensed';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/ibm-plex-sans-condensed-v15-latin/ibm-plex-sans-condensed-v15-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-sans-condensed-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans Condensed';
+  font-style: italic;
+  font-weight: 500;
+  src: url('./fonts/ibm-plex-sans-condensed-v15-latin/ibm-plex-sans-condensed-v15-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* ibm-plex-mono-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./fonts/ibm-plex-mono-v23-latin/ibm-plex-mono-v23-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-200italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 200;
+  src: url('./fonts/ibm-plex-mono-v23-latin/ibm-plex-mono-v23-latin-200italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/ibm-plex-mono-v23-latin/ibm-plex-mono-v23-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-300italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 300;
+  src: url('./fonts/ibm-plex-mono-v23-latin/ibm-plex-mono-v23-latin-300italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/ibm-plex-mono-v23-latin/ibm-plex-mono-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./fonts/ibm-plex-mono-v23-latin/ibm-plex-mono-v23-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/ibm-plex-mono-v23-latin/ibm-plex-mono-v23-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 500;
+  src: url('./fonts/ibm-plex-mono-v23-latin/ibm-plex-mono-v23-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/ibm-plex-mono-v23-latin/ibm-plex-mono-v23-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-600italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 600;
+  src: url('./fonts/ibm-plex-mono-v23-latin/ibm-plex-mono-v23-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+:root {
+    --paper: #226699;
+    --paper-deep: #1b5280;
+    --ink: #ffffff;
+    --link-muted: #d9e8f3;
+    --grid-major: var(--ink);
+    --grid-minor: rgba(255, 255, 255, 0.3);
+
+    --space-1: 10px;
+    --space-2: 20px;
+    --space-4: 40px;
+    --space-10: 100px;
+
+    --line-thin: 1px;
+    --line-thick: 2px;
+    
+    --font-display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+/* CSS RESETS */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin on body and common text elements */
+body, h1, h2, h3, h4, p, figure, blockquote, ul, ol, dl, dd {
+  margin: 0;
+}
+
+/* 3. Set core root defaults */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* 4. Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Make media elements easier to work with */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+body {
+    background-color: var(--paper);
+    background-image: linear-gradient(var(--grid-major) var(--line-thick), transparent var(--line-thick)),
+    linear-gradient(90deg, var(--grid-major) var(--line-thick), transparent var(--line-thick)),
+    linear-gradient(var(--grid-minor) var(--line-thin), transparent var(--line-thin)),
+    linear-gradient(90deg, var(--grid-minor) var(--line-thin), transparent var(--line-thin));
+    background-size: var(--space-10) var(--space-10), var(--space-10) var(--space-10),
+    var(--space-2) var(--space-2), var(--space-2) var(--space-2);
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    background-attachment: fixed;
+    
+    color: var(--ink);
+    font-family: var(--font-display);
+    
+    padding: 2rem 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    /* position: fixed; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    display: inline-block;
+}
+
+h1 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    line-height: 3.25rem;
+    font-weight: 600;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+}
+
+.bp-card,
+.bp-card__container {
+    display: flex;
+    flex-direction: column;
+    
+}
+.bp-card {
+    border: var(--line-thick) solid var(--ink);
+    
+}
+.bp-card__container {
+    color: var(--ink);
+    font-family: var(--font-mono);
+    gap: 10px;
+
+    font-size: 0.75rem;
+    line-height: 1rem;
+
+
+    background: var(--paper-deep);
+    color: var(--ink);
+
+    padding: 1.25rem;
+}
+
+.bp-card__topic-list {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    color: var(--link-muted);
+    font-family: var(--font-mono);
+    letter-spacing: 0.08rem;
+}
+
+.bp-card p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--link-muted)
+}
+
+.bp-card__footer {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1px;
+    flex-wrap: wrap;
+    background-color: var(--ink);
+}
+.bp-card__footer-item {
+    border-top: 1px solid var(--ink);
+    background-color: var(--paper-deep);
+    flex: 1 1 180px;
+    padding: 10px 20px;
+    display: inline-flex;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    flex-direction: column;
+}
