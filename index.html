@@ -57,6 +57,7 @@
                             id="first-name" 
                             name="fname" 
                             placeholder="Rusty"
+                            autocomplete="off"
                             required>
                     </div>
                     <div class="bp-field">
@@ -66,6 +67,7 @@
                             id="last-name"
                             name="lname" 
                             placeholder="Shackleford"
+                            autocomplete="off"
                             required>
                     </div>
                     <div class="bp-field">
@@ -88,12 +90,18 @@
                     <div class="bp-field">
                         <fieldset>
                             <legend>Optional: Topics of Interest</legend>
-                            <input type="checkbox" id="interest-js" name="interests" value="javascript">
-                            <label for="interest-js">JavaScript</label>
-                            <input type="checkbox" id="interest-dogs" name="interests" value="dogs">
-                            <label for="interest-dogs">Dogs</label>
-                            <input type="checkbox" id="interest-titanic" name="interests" value="titanic">
-                            <label for="interest-titanic">Titanic</label>
+                            <div class="bp--radio-option">
+                                <input type="checkbox" id="interest-cheese" name="interests" value="cheese">
+                                <label for="interest-cheese">Cheese</label>
+                            </div>
+                            <div class="bp--radio-option">
+                                <input type="checkbox" id="interest-dogs" name="interests" value="dogs">
+                                <label for="interest-dogs">Dogs</label>
+                            </div>
+                            <div class="bp--radio-option">
+                                <input type="checkbox" id="interest-titanic" name="interests" value="titanic">
+                                <label for="interest-titanic">Titanic</label>
+                            </div>
                         </fieldset>
                     </div>
                     <div class="bp-field">
