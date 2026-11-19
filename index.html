@@ -32,7 +32,100 @@
             </div>
             <div class="bp-card__footer-item">
                 <div class="bp-card__footer-label">publish date</div>
-                <div class="bp-card__footer-value">11/17/2026</div>
+                <div class="bp-card__footer-value">11-17-2026</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bp-card">
+        <div class="bp-card__body">
+            <div class="bp-card__topic-container">
+                <span class="bp-card__topic-list">item 01 • gsap installation</span>
+                <span class="bp-card__topic-list bold-right">via CDN</span>
+            </div>
+            <div class="bp-card__primary-content">
+                <h2 class="bp-card__title">Installing the GSAP Library</h2>
+
+                <!-- Need to style each of these items -->
+
+            <form action="#" method="POST">
+                    <!-- The two text fields -->
+                    <p>
+                        <label for="first-name">First Name:</label>
+                        <input 
+                            type="text" 
+                            id="first-name" 
+                            name="fname" 
+                            placeholder="Rusty"
+                            required>
+                    </p>
+                    <p>
+                        <label for="last-name">Last Name:</label>
+                        <input 
+                            type="text" 
+                            id="last-name"
+                            name="lname" 
+                            placeholder="Shackleford"
+                            required>
+                    </p>
+
+                    <!-- A fieldset with at least three radio buttons -->
+                    <fieldset>
+                        <legend>Preferred Contact Method</legend>
+                        <input type="radio" id="contact-geocities" name="contact_method" value="geocities" required>
+                        <label for="contact-geocities">Geocities</label><br>
+                        <input type="radio" id="contact-bottle" name="contact_method" value="bottle" required>
+                        <label for="contact-bottle">Message in a Bottle</label><br>
+                        <input type="radio" id="contact-carrier-pigeon" name="contact_method" value="pigeon" required>
+                        <label for="contact-carrier-pigeon">Carrier Pigeon</label><br>
+                        <input type="radio" id="contact-yahoo" name="contact_method" value="yahoo" required>
+                        <label for="contact-yahoo">Yahoo! Messenger</label>
+                    </fieldset>
+
+                    <br>
+
+                    <!-- A fieldset with at least three checkboxes -->
+                    <fieldset>
+                        <legend>Optional: Topics of Interest (check all that apply)</legend>
+                        <input type="checkbox" id="interest-js" name="interests" value="javascript">
+                        <label for="interest-js">JavaScript</label>
+                        <input type="checkbox" id="interest-dogs" name="interests" value="dogs">
+                        <label for="interest-dogs">Dogs</label>
+                        <input type="checkbox" id="interest-titanic" name="interests" value="titanic">
+                        <label for="interest-titanic">Titanic</label>
+                    </fieldset>
+
+                    <!-- A select list -->
+                    <p>
+                        <label for="spice">Select Level of Spiciness:</label>
+                        <select id="spice" name="spice" required>
+                            <option value="">-- Choose one --</option>
+                            <option value="mild">Mild</option>
+                            <option value="medium">Medium</option>
+                            <option value="spicy">Spicy</option>
+                            <option value="extra-spicy">Extra Spicy</option>
+                        </select>
+                    </p>
+
+                    <!-- A textarea -->
+                    <p>
+                        <label for="comments">Mandatory comments:</label><br>
+                        <textarea 
+                            id="comments" 
+                            name="comments"
+                            rows="5" 
+                            cols="40"
+                            placeholder="What in the world is this form for?"
+                            required></textarea>
+                    </p>
+
+                    <!-- A submit button -->
+                    <p>
+                        <button type="submit">Submit</button>
+                    </p>
+                </form>
+
+
             </div>
         </div>
     </div>
