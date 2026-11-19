@@ -29,18 +29,18 @@ Likely to change but this inspired the design I have in my head.
 ## Components
 
 ### Card
-- [ ] Base card: light white outline (`border`)
-- [ ] Slightly shaded background so the card stands out from the pattern (prbly semi-transparent fill, e.g. `rgba()`)
+- [x] Base card: light white outline (`border`)
+- [x] Slightly shaded background so the card stands out from the pattern (prbly semi-transparent fill, e.g. `rgba()`)
 - [ ] Nested card variant (card inside a card) for grouping content
-- [ ] Check text contrast inside cards
+- [x] Check text contrast inside cards
 
 ### Form Controls
 - [ ] Button (default / hover / focus / active / disabled states)
-- [ ] Checkbox
-- [ ] Radio
+- [x] Checkbox
+- [x] Radio
 - [ ] Select
 - [ ] Textarea
-- [ ] Text input
+- [x] Text input
 - [ ] Every control paired with a `<label>` that is also styled
 
 ---
