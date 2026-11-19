@@ -507,3 +507,38 @@ input[type="checkbox"] {
   box-shadow: inset 0 0 0 3px var(--paper-deep);
     }
 
+/* button styling */
+
+.button-std,
+.button-alt {
+
+  padding: 0.375rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.06rem;
+  cursor: pointer
+}
+  .button-std {
+    background: var(--paper-deep);
+    border: var(--line-thick) solid var(--ink);
+    color: var(--ink)
+  }
+    .button-std:hover {
+      background: var(--ink);
+      color: var(--paper-deep)
+    }
+  .button-alt {
+    background: var(--ink);
+    border: var(--line-thick) solid var(--ink);
+    color: var(--paper-deep)
+  }
+    .button-alt:hover {
+      background: var(--paper-deep);
+      color: var(--ink)
+    }
