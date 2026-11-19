@@ -71,19 +71,23 @@
                     <div class="bp-field">
                         <fieldset>
                             <legend>Preferred Contact Method</legend>
-                            <input type="radio" id="contact-geocities" name="contact_method" value="geocities" required>
-                            <label for="contact-geocities">Geocities</label><br>
-                            <input type="radio" id="contact-bottle" name="contact_method" value="bottle" required>
-                            <label for="contact-bottle">Message in a Bottle</label><br>
-                            <input type="radio" id="contact-carrier-pigeon" name="contact_method" value="pigeon" required>
-                            <label for="contact-carrier-pigeon">Carrier Pigeon</label><br>
-                            <input type="radio" id="contact-yahoo" name="contact_method" value="yahoo" required>
-                            <label for="contact-yahoo">Yahoo! Messenger</label>
+                            <div class="bp--radio-option">
+                                <input type="radio" id="contact-bottle" name="contact_method" value="bottle" required>
+                                <label for="contact-bottle">Message in a Bottle</label>
+                            </div>
+                            <div class="bp--radio-option">
+                                <input type="radio" id="contact-carrier-pigeon" name="contact_method" value="pigeon" required>
+                                <label for="contact-carrier-pigeon">Carrier Pigeon</label>
+                            </div>
+                            <div class="bp--radio-option">
+                                <input type="radio" id="contact-yahoo" name="contact_method" value="yahoo" required>
+                                <label for="contact-yahoo">Yahoo! Messenger</label>
+                            </div>
                         </fieldset>
                     </div>
                     <div class="bp-field">
                         <fieldset>
-                            <legend>Optional: Topics of Interest (check all that apply)</legend>
+                            <legend>Optional: Topics of Interest</legend>
                             <input type="checkbox" id="interest-js" name="interests" value="javascript">
                             <label for="interest-js">JavaScript</label>
                             <input type="checkbox" id="interest-dogs" name="interests" value="dogs">

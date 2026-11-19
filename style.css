@@ -150,7 +150,7 @@
     --paper: #226699;
     --paper-deep: #1b5280;
     --ink: #ffffff;
-    --highlight: #fffb00;
+    --highlight: #FF5722;
     --link-muted: #d9e8f3;
     --grid-major: var(--ink);
     --grid-minor: rgba(255, 255, 255, 0.3);
@@ -399,7 +399,7 @@ h1 {
 .bp-field {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 4px;
     max-width: 25rem; /* 400px */
 }
 
@@ -416,10 +416,77 @@ input {
     line-height: 1.25rem;
     padding: 0.625rem 0.125rem;
 }
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: auto;
+        flex-shrink: 0;
+        padding: 0;
+        border: 0;
+    }
     input::placeholder {
         color: var(--link-muted);
     }
     input:focus {
         outline: var(--line-thick) solid var(--highlight);
         outline-offset: var(--line-thick);
+    }
+        input[type="radio"]:focus,
+        input[type="checkbox"]:focus {
+            outline: none;
+        }
+label,
+legend {
+    text-transform: uppercase;
+    color: var(--ink);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.04rem;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1.25rem;
+    border: var(--line-thick) solid var(--ink);
+    gap: 0.625rem;
+    max-width: 25rem;
+    background: var(--bp-surface);
+}
+    legend {
+        padding: 0 0.625rem;
+    }
+.bp--radio-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+    align-self: flex-start;
+    background: var(--bp-surface, transparent);
+}
+    .bp--radio-option > label { /* Dear Shae, I know you're going to be responsible and fix this, right? RIGHT!?! */
+        font-family: var(--font-display);
+        font-size: 1rem;
+        text-transform: none;
+        line-height: 1.5rem;
+        font-weight: 400;
+        cursor: pointer;
+    }
+input[type="radio"] {
+    border-radius: 50%;
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0;
+    border: var(--line-thick) solid var(--ink);
+    cursor: pointer;
+}
+    input[type="radio"]:checked {
+        background: radial-gradient(circle, var(--ink) 35%, transparent 40%);
     }
