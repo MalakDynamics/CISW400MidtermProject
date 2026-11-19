@@ -171,52 +171,54 @@
   box-sizing: border-box;
 }
 
-/* 2. Remove default margin on body and common text elements */
-body, h1, h2, h3, h4, p, figure, blockquote, ul, ol, dl, dd {
+/* 2. Remove default margin */
+*:not(dialog) {
   margin: 0;
 }
 
-/* 3. Set core root defaults */
-html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
 }
 
-/* 4. Set core body defaults */
 body {
-  min-height: 100vh;
+  /* 4. Increase line-height */
   line-height: 1.5;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
 
-/* 5. Make media elements easier to work with */
+/* 6. Improve media defaults */
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
 
-/* 6. Inherit fonts for form controls */
+/* 7. Inherit fonts for form controls */
 input, button, textarea, select {
   font: inherit;
 }
 
-/* 7. Avoid text overflows */
+/* 8. Avoid text overflows */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
 }
 
 
@@ -255,6 +257,27 @@ h1 {
     letter-spacing: 0.12rem;
     text-transform: uppercase;
 }
+
+.title-card__main {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1rem;
+    background-color: var(--paper-deep);
+    color: var(--ink);
+    padding: 1.25rem;
+}
+.title-card__topic-list {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    color: var(--link-muted);
+    font-family: var(--font-mono);
+    letter-spacing: 0.08rem;
+}
+
+
 
 .bp-card,
 .bp-card__container {
@@ -303,9 +326,10 @@ h1 {
     gap: 1px;
     flex-wrap: wrap;
     background-color: var(--ink);
-}
-.bp-card__footer-item {
     border-top: 1px solid var(--ink);
+}
+
+.bp-card__footer-item {
     background-color: var(--paper-deep);
     flex: 1 1 180px;
     padding: 10px 20px;
@@ -314,3 +338,24 @@ h1 {
     font-weight: 600;
     flex-direction: column;
 }
+    .bp-card__footer-label,
+    .bp-card__footer-value  {
+        text-transform: uppercase;
+        
+    }
+    
+    .bp-card__footer-label {
+        font-family: var(--font-display);
+        font-weight: 400;
+        color: var(--link-muted);
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: 0.08rem;
+    }
+    .bp-card__footer-value {
+        font-weight: 500;
+        font-family: var(--font-mono);
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        letter-spacing: -0.01rem;
+    }
