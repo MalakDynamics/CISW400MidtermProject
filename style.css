@@ -150,6 +150,7 @@
     --paper: #226699;
     --paper-deep: #1b5280;
     --ink: #ffffff;
+    --highlight: #fffb00;
     --link-muted: #d9e8f3;
     --grid-major: var(--ink);
     --grid-minor: rgba(255, 255, 255, 0.3);
@@ -393,4 +394,32 @@ h1 {
         font-size: 0.875rem;
         line-height: 1.25rem;
         letter-spacing: -0.01rem;
+    }
+
+.bp-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 25rem; /* 400px */
+}
+
+input {
+    width: 100%;
+    border: 0;
+    border-bottom: var(--line-thick) solid var(--ink);
+    border-radius: 0;
+    
+    background: var(--bp-surface);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.625rem 0.125rem;
+}
+    input::placeholder {
+        color: var(--link-muted);
+    }
+    input:focus {
+        outline: var(--line-thick) solid var(--highlight);
+        outline-offset: var(--line-thick);
     }
