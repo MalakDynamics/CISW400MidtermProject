@@ -70,8 +70,8 @@ Demo ideas:
 ## Open Questions
 
 - [x] Stick with BEM for CSS?
--- *answer:* Yes.....badly so far but yes 
+- **Answer:** Yes.....badly so far but yes 
 - [x] Build a custom CSS Root?
--- *answer:* Yes...at root of system.
+- **Answer:** Yes...at root of system.
 - [ ] How many examples?
 - [ ] All examples on one page or do we want the intersection overvor on another (or do we want the intersection observer to control the page and show how it's done at the end?)
