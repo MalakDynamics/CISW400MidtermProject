@@ -115,8 +115,7 @@
                         </select>
                     </div>
                     <div class="bp-field">
-                        <p>
-                            <label for="comments">Mandatory comments:</label><br>
+                            <label for="comments">Mandatory comments:</label>
                             <textarea 
                                 id="comments" 
                                 name="comments"
@@ -124,15 +123,24 @@
                                 cols="40"
                                 placeholder="What in the world is this form for?"
                                 required></textarea>
-                        </p>
                     </div>
 
-                    <p>
-                        <button class="button-std" type="submit">Submit</button>
-                    </p>
-                    <p>
-                        <button class="button-alt" type="submit">Cancel</button>
-                    </p>
+<figure>
+    <p class="code-title">greet.js</p>
+    <pre><code class="language-javascript">const greet = (name) => {
+    const message = `Hello, ${name}!`;
+    console.log(message);
+};</code></pre>
+    <figcaption>Arrow function that builds and logs a greeting. It's here just to take up space right now. So is this!</figcaption>
+</figure>
+<div class="button-container">
+    <p>
+        <button class="button-alt" type="submit">Cancel</button>
+    </p>
+    <p>
+        <button class="button-std" type="submit">Submit</button>
+    </p>
+</div>
 
 
 
