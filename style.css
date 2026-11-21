@@ -150,7 +150,7 @@
     --paper: #226699;
     --paper-deep: #1b5280;
     --ink: #ffffff;
-    --highlight: #FF5722;
+    --highlight: #fff238;
     --link-muted: #d9e8f3;
     --grid-major: var(--ink);
     --grid-minor: rgba(255, 255, 255, 0.3);
@@ -406,7 +406,7 @@ h1 {
 input {
     width: 100%;
     border: 0;
-    border-bottom: var(--line-thick) solid var(--ink);
+    border-bottom: var(--line-thin) solid var(--ink);
     border-radius: 0;
     
     background: var(--bp-surface);
@@ -414,7 +414,44 @@ input {
     font-family: var(--font-mono);
     font-size: 0.875rem;
     line-height: 1.25rem;
-    padding: 0.625rem 0.125rem;
+    padding: 0.625rem 0.5rem;
+
+    /* sets the focus, come back and figure out how to  */
+    background-image: 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight));
+        background-repeat: no-repeat;
+        background-position:    
+                            0 0,
+                            0 0, 
+
+                            100% 0,
+                            100% 0,
+
+                            0 100%,
+                            0 100%,
+
+                            100% 100%, 
+                            100% 100%;
+        background-size: 
+                        0px 2px, 
+                        2px 0px, 
+
+                        0px 2px, 
+                        2px 0px, 
+
+                        0px 2px, 
+                        2px 0px, 
+
+                        0px 2px, 
+                        2px 0px;
+        transition: background-size 0.2s;
 }
     input[type="radio"],
     input[type="checkbox"] {
@@ -427,12 +464,48 @@ input {
         color: var(--link-muted);
     }
     input:focus {
-        outline: var(--line-thick) solid var(--highlight);
-        outline-offset: var(--line-thick);
+        /* outline: var(--line-thick) solid var(--highlight); */
+        outline: transparent;
+        background-image: 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight)), 
+        linear-gradient(var(--highlight), var(--highlight));
+        background-repeat: no-repeat;
+        background-position:    
+                            0 0,
+                            0 0, 
+
+                            100% 0,
+                            100% 0,
+
+                            0 100%,
+                            0 100%,
+
+                            100% 100%, 
+                            100% 100%;
+        background-size: 
+                        12px 2px, 
+                        2px 12px, 
+
+                        12px 2px, 
+                        2px 12px, 
+
+                        12px 2px, 
+                        2px 12px, 
+
+                        12px 2px, 
+                        2px 12px;
     }
-        input[type="radio"]:focus,
-        input[type="checkbox"]:focus {
-            outline: none;
+
+        input[type="radio"]:focus-visible,
+        input[type="checkbox"]:focus-visible {
+            outline: var(--line-thick) solid var(--highlight);
+            outline-offset: var(--line-thick);
         }
 label,
 legend {
@@ -450,7 +523,7 @@ fieldset {
     flex-direction: column;
     margin: 0;
     padding: 1.25rem;
-    border: var(--line-thick) solid var(--ink);
+    border: var(--line-thin) solid var(--ink);
     gap: 0.625rem;
     max-width: 25rem;
     background: var(--bp-surface);
