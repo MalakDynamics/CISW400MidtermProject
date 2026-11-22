@@ -768,6 +768,17 @@ h2 {
     justify-content: flex-end;
 }
 
+.step-container:has(> .step-cards) {
+    align-items: flex-start;
+}
+
+.step-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 56.25rem;
+}
+
 .primary-content__doubles-container {
     display: flex;
     flex-wrap: wrap-reverse;

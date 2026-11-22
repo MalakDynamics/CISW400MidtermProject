@@ -15,6 +15,11 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"></script>
     <!-- Prism syntax highlighting (core includes markup/html, css, clike, javascript) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <script src="./scripts/2A.js" defer></script>
+    <script src="./scripts/2B.js" defer></script>
+    <script src="./scripts/2C.js" defer></script>
+    <script src="./scripts/2D.js" defer></script>
+    <script src="./scripts/3.js" defer></script>
     
 </head>
 <body>
@@ -23,9 +28,15 @@
         <div class="title-card__main">
 
             <span class="bp-card__topic-list">tutorial • GSAP animations</span>
-            <h1>This is the primary header</h1>
+            <h1>Learn to use the GSAP library</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                GSAP is a wonderful animation library used by award-winning websites and the biggest companies in the world. It can let you manipulate the DOM with incredible precision and turn a static page into a carefully choreographed set-piece. 
+            </p>
+            <p>
+                Much like jQuery, you can do many of the things GSAP does with vanilla JavaScript and CSS, but again, much like jQuery, you'll find yourself writing a lot more code to do the same thing as GSAP, and you are missing out on a wonderful array of plugins that speed up your work and let you do things that might otherwise be inaccessible.
+            </p>
+            <p>
+                Mind you, this is more than just a jQuery .animate() clone! Unlike jQuery's .animate() library, GSAP has native hardware acceleration for smooth 60+fps animations timed to refresh rate, it can natively touch properties that .animate() cannot without by-frame JavaScript calculations, and it has animation timelines to choreograph complex chains of animations. If you want complex, smooth animations, then GSAP is the library for you!
             </p>
         </div>
         <div class="bp-card__footer">
@@ -35,7 +46,7 @@
             </div>
             <div class="bp-card__footer-item">
                 <div class="bp-card__footer-label">rev</div>
-                <div class="bp-card__footer-value">A</div>
+                <div class="bp-card__footer-value">B</div>
             </div>
             <div class="bp-card__footer-item">
                 <div class="bp-card__footer-label">library</div>
@@ -43,7 +54,7 @@
             </div>
             <div class="bp-card__footer-item">
                 <div class="bp-card__footer-label">publish date</div>
-                <div class="bp-card__footer-value">11-17-2026</div>
+                <div class="bp-card__footer-value">11-22-2026</div>
             </div>
         </div>
     </div>
@@ -186,7 +197,10 @@
                 <div class="bp-card__primary-content">
                     <h3 class="bp-card__title">Installing the GSAP Library</h3>
                     <p>
-                        For this example, we will rely on a CDN to deliver the GSAP library. GPaste these script tags inside the &lt;head&gt; of your starter file, right after the stylesheet link:
+                        In this lesson, we may not be building an award-winning website, but we are going to get a solid grasp of the core GSAP functions, try out some animations that would be difficult in jQuery, some animations that would be difficult in CSS, and we will put together some of what we learned to make our web page a little livelier.
+                    </p>
+                    <p>
+                        For this lesson, we will rely on a CDN to deliver the GSAP library. Copy and paste these script tags inside the &lt;head&gt; of your starter file, right after the stylesheet link:
                     </p>
                     <figure>
                         <p class="code-title">index.html</p>
@@ -204,21 +218,23 @@
     </div>
     <div class="step-container alt">
         <h2>STEP <span class="header-number">02</span> <span>Basic Movements</span></h2>
+        
+        <div class="step-cards">
+<!-- first card for step 02...I REALLY want to animate this -->
         <div class="bp-card">
             <div class="bp-card__body">
                 <div class="bp-card__topic-container">
-                    <span class="bp-card__topic-list">item 02 • Moving Objects with GSAP</span>
+                    <span class="bp-card__topic-list">item 02-A • Moving Objects with GSAP</span>
                     <span class="bp-card__topic-list bold-right">via gsap.to()</span>
                 </div>
                 <div class="bp-card__primary-content">
                     <h3 class="bp-card__title">Moving Obects With GSAP: gsap.to()</h3>
                     <div>
                         <p>
-                            The most basic way to move an object with GSAP is the gsap.to() function. In gsap, this instruction is called a 'tween.'
+                            When thinking about animation, it's important to think about each animation as moving from a "start state" to an "end state." GSAP let's you define an animation by declaring properties from its starting state, from its ending state, or even from both! 
                         </p>
                         <p>
-                            These more basic movements are easily accomplished with CSS classes, but let's start with just trying to move an object.
-                            gsap.to() will move an object from it's original position to a new position that you define in its variables.
+                            Let's start by looking at animating to an end state with the .to() method. If no other animations have been applied, we can treat the original position of the object as the start position of the animation, and then identify its ending state to animate to.
                         </p>
                         <p>
                             The parameters taken are a target object, written as you would a querySelector target ('.box', '#box', etc.), and an object with all the properties for the animations like positioning and appearence.
@@ -247,56 +263,233 @@
                             <button id="item-02__play" class="button-std" type="button">Play</button>
                         </p>
                         <p>
-                            <select id="item-02__distance" aria-label="Distance in pixels">
+                            <select id="item-02__distance">
                                 <option value="50">50px</option>
                                 <option value="100">100px</option>
                                 <option value="200" selected>200px</option>
                             </select>
                         </p>
                     </div>
-                  
+
+                </div>
+            </div>
+        </div>
+
+        <!-- second card for step 02 -->
+        <div class="bp-card">
+            <div class="bp-card__body">
+                <div class="bp-card__topic-container">
+                    <span class="bp-card__topic-list">item 02-B • combining transformations</span>
+                    <span class="bp-card__topic-list bold-right">via gsap.to()</span>
+                </div>
+                <div class="bp-card__primary-content">
+                    <h3 class="bp-card__title">Adding Rotation: gsap.to()</h3>
+                    <div>
+                        <p>
+                            One tween can animate more than one property at a time. Add a rotation value to an object with a move value and GSAP will work out the animation all on its own to move and spin the box together, finishing both at the same moment.
+                        </p>
+                        <p>
+                            Rotation is measured in degrees. Positive values turn the box clockwise, and you can see the effects in the demo below. 
+                        </p>
+                    </div>
+
+                    <div class="primary-content__doubles-container">
+                        <div class="bp-sandbox">
+                            <div id="item-02b__gsap-target" class="bp-sandbox__object-large">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#FFFFFF"><path d="M12,10.8L7.4,15.4L6,14l6-6l6,6l-1.4,1.4L12,10.8Z"/></svg>
+                            </div>
+                        </div>
+                        <figure>
+                        <pre><code id="item-02b__code" class="language-html">&lt;script&gt;
+   gsap.to(".box", { x: 200, rotation: 90 })
+&lt;/script&gt;</code></pre>
+                        </figure>
+                    </div>
+
+                    <div class="button-container">
+                        <p>
+                            <button id="item-02b__reset" class="button-alt" type="button">Reset</button>
+                        </p>
+                        <p>
+                            <button id="item-02b__play" class="button-std" type="button">Play</button>
+                        </p>
+                        <p>
+                            <select id="item-02b__distance">
+                                <option value="50">50px</option>
+                                <option value="100">100px</option>
+                                <option value="200" selected>200px</option>
+                            </select>
+                        </p>
+                        <p>
+                            <select id="item-02b__rotation">
+                                <option value="90" selected>90°</option>
+                                <option value="180">180°</option>
+                                <option value="360">360°</option>
+                            </select>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- third card for step 02 -->
+        <div class="bp-card">
+            <div class="bp-card__body">
+                <div class="bp-card__topic-container">
+                    <span class="bp-card__topic-list">item 02-C • Defining the Start</span>
+                    <span class="bp-card__topic-list bold-right">via gsap.from()</span>
+                </div>
+                <div class="bp-card__primary-content">
+                    <h3 class="bp-card__title">Starting Point: gsap.from()</h3>
+                    <div>
+                        <p>
+                            gsap.from() works the other way around from .to(). Instead of saying where the object ends up, you say where it starts, and GSAP animates it back to where it already sits on the page.
+                        </p>
+                        <p>
+                            This is handy for entrance animations, like sliding a card in from the side when the page loads, because the object's normal spot in your CSS is already the end state you want.
+                        </p>
+                    </div>
+
+                    <div class="primary-content__doubles-container">
+                        <div class="bp-sandbox">
+                            <div id="item-02c__gsap-target" class="bp-sandbox__object-large">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#FFFFFF"><path d="M12,10.8L7.4,15.4L6,14l6-6l6,6l-1.4,1.4L12,10.8Z"/></svg>
+                            </div>
+                        </div>
+                        <figure>
+                        <pre><code id="item-02c__code" class="language-html">&lt;script&gt;
+   gsap.from(".box", { x: 200 })
+&lt;/script&gt;</code></pre>
+                        </figure>
+                    </div>
+
+                    <div class="button-container">
+                        <p>
+                            <button id="item-02c__reset" class="button-alt" type="button">Reset</button>
+                        </p>
+                        <p>
+                            <button id="item-02c__play" class="button-std" type="button">Play</button>
+                        </p>
+                        <p>
+                            <select id="item-02c__distance">
+                                <option value="50">50px</option>
+                                <option value="100">100px</option>
+                                <option value="200" selected>200px</option>
+                            </select>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- fourth card for step 02 -->
+        <div class="bp-card">
+            <div class="bp-card__body">
+                <div class="bp-card__topic-container">
+                    <span class="bp-card__topic-list">item 02-D • Start-Finish Control</span>
+                    <span class="bp-card__topic-list bold-right">via gsap.fromTo()</span>
+                </div>
+                <div class="bp-card__primary-content">
+                    <h3 class="bp-card__title">Start to Finish: gsap.fromTo()</h3>
+                    <div>
+                        <p>
+                            You might have noticed that the play button in the examples so far only works for one click before needing to be reset. That is because the .to() function will compare where the object's current state is with the final state you defined for it, and it will animate the intermediate frames to get to that change. If it's already at it's final state, there's nothing to animate!
+                        </p>
+                        <p>
+                            If we want to give the object a defined animation that plays out consistently every time, we want to use something that defines a consistent start state and end state. For that, we have the fromTo() function.
+                        </p>
+                    </div>
+
+                    <div class="primary-content__doubles-container">
+                        <div class="bp-sandbox" style="height: 200px">
+                            <div id="item-02d__gsap-target-1" class="bp-sandbox__object-large">
+                                1
+                            </div>
+                            <div id="item-02d__gsap-target-2" class="bp-sandbox__object-large" style="top:130px">
+                                2
+                            </div>
+                        </div>
+                        <figure>
+                        <pre><code id="item-02d__code" class="language-html">&lt;script&gt;
+   gsap.to(".box__1", { x: 200 })
+   gsap.fromTo(".box__2", { x: 0 }, { x: 200 })
+&lt;/script&gt;</code></pre>
+                        </figure>
+                    </div>
+
+                    <div class="button-container">
+                        <p>
+                            <button id="item-02d__reset" class="button-alt" type="button">Reset</button>
+                        </p>
+                        <p>
+                            <button id="item-02d__play-1" class="button-std" type="button">Play .to()</button>
+                        </p>
+                        <p>
+                            <button id="item-02d__play-2" class="button-std" type="button">Play .fromTo()</button>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+        <div class="step-container">
+        <h2>STEP <span class="header-number">03</span> <span>Pacing Animations</span></h2>
+        <div class="bp-card">
+            <div class="bp-card__body">
+                <div class="bp-card__topic-container">
+                    <span class="bp-card__topic-list">item 03 • Animating Groups</span>
+                    <span class="bp-card__topic-list bold-right">via stagger</span>
+                </div>
+                <div class="bp-card__primary-content">
+                    <h3 class="bp-card__title">Animating Groups: stagger</h3>
+                    <div>
+                        <p>
+                            GSAP can often make animations that would be verbose in CSS occur concisely with GSAP. When a selector matches several elements, gsap.to() can animate all of them. On its own, every element moves at exactly the same time, but GSAP gives us tools to control that sequence.
+                        </p>
+                        <p>
+                            Adding a stagger value offsets each element's start by that many seconds, so the group moves one after another like a wave. In CSS you would need a separate animation-delay on every element to get the same effect, one line per item animated. In GSAP we can do it in just one property!
+                        </p>
+                    </div>
+
+                    <div class="primary-content__doubles-container">
+                        <div class="bp-sandbox">
+                            <div class="bp-sandbox__object-small--row">
+                                <div class="bp-sandbox__object-small item-03__gsap-target"></div>
+                                <div class="bp-sandbox__object-small item-03__gsap-target"></div>
+                                <div class="bp-sandbox__object-small item-03__gsap-target"></div>
+                                <div class="bp-sandbox__object-small item-03__gsap-target"></div>
+                                <div class="bp-sandbox__object-small item-03__gsap-target"></div>
+                            </div>
+                        </div>
+                        <figure>
+                        <pre><code id="item-03__code" class="language-html">&lt;script&gt;
+   gsap.to(".box", { y: -30, stagger: 0.1 })
+&lt;/script&gt;</code></pre>
+                        </figure>
+                    </div>
+
+                    <div class="button-container">
+                        <p>
+                            <button id="item-03__reset" class="button-alt" type="button">Reset</button>
+                        </p>
+                        <p>
+                            <button id="item-03__play" class="button-std" type="button">Play</button>
+                        </p>
+                        <p>
+                            <select id="item-03__stagger">
+                                <option value="0">0s (no stagger)</option>
+                                <option value="0.1" selected>0.1s</option>
+                                <option value="0.25">0.25s</option>
+                                <option value="0.5">0.5s</option>
+                            </select>
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-    <script>
-
-        // ==========================================================
-        // Item 02: gsap.to() demo, pause it for demo
-        // ==========================================================
-        let item02Tween = gsap.to("#item-02__gsap-target", { x: 200, paused: true });
-
-        // play button wired to animation, auto-play was miserable, more advanced than what demo shows but
-        // willing to compromise to make it more enjoyable as a lesson.
-        document.getElementById("item-02__play").addEventListener("click", function () {
-            item02Tween.restart();
-        });
-
-        // send the box back to the start and hold it there so it doesn't just auto-play
-        document.getElementById("item-02__reset").addEventListener("click", function () {
-            item02Tween.pause(0);
-        });
-        
-        // on change, kill old gsap, replace with new selected value, restart gsap
-        document.getElementById("item-02__distance").addEventListener("change", function () {
-            const distance = this.value;
-
-            item02Tween.kill();
-            gsap.set("#item-02__gsap-target", { x: 0 });
-            item02Tween = gsap.to("#item-02__gsap-target", { x: distance, paused: true });
-
-            // CHange the code shown
-            const code = document.getElementById("item-02__code");
-            code.innerHTML = `&lt;script&gt;
-   gsap.to(".box", { x: ${distance} })
-&lt;/script&gt;`;
-            // Prism to style the code again
-            Prism.highlightElement(code);
-        });
-
-
-
-
-    </script>
 </body>
 </html>
