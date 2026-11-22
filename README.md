@@ -31,17 +31,17 @@ Likely to change but this inspired the design I have in my head.
 ### Card
 - [x] Base card: light white outline (`border`)
 - [x] Slightly shaded background so the card stands out from the pattern (prbly semi-transparent fill, e.g. `rgba()`)
-- [ ] Nested card variant (card inside a card) for grouping content
+- [x] Nested card variant (card inside a card) for grouping content
 - [x] Check text contrast inside cards
 
 ### Form Controls
-- [ ] Button (default / hover / focus / active / disabled states)
+- [x] Button (default / hover / focus / active / ~~disabled~~ states)
 - [x] Checkbox
 - [x] Radio
-- [ ] Select
-- [ ] Textarea
+- [x] Select
+- [x] Textarea
 - [x] Text input
-- [ ] Every control paired with a `<label>` that is also styled
+- [x] Every control paired with a `<label>` that is also styled
 
 ---
 
@@ -56,9 +56,9 @@ Each demo has:
 4. **Class Elements:** Uses the slideshow feature we learned in class, leverage intersection observors
 
 Demo ideas:
-- [ ] Move / translate
-- [ ] Rotate / scale
-- [ ] Fade / stagger multiple divs
+- [x] Move / translate
+- [x] Rotate / scale
+- [x] Fade / stagger multiple divs
 - [ ] Timeline (chained animations)
 
 ### jQuery + GSAP
