@@ -703,6 +703,19 @@ pre[class="language-html"] {
     top: 30px;
     left: 30px;
 }
+.scroll-demo {
+    height: 200px;
+    overflow-y: auto;
+    background-attachment: local; 
+}
+    .scroll-demo__spacer {
+        height: 300px;
+    }
+    .scroll-demo .bp-sandbox__object-large {
+        position: relative; /* position: absolute wasn't working */
+        top: auto;
+        left: 30px;
+    }
     .bp-sandbox__object-large svg {
         width: 100%;
         height: 100%;
@@ -784,8 +797,8 @@ h2 {
     flex-wrap: wrap-reverse;
     min-height: 100px;
     gap: 10px;
-
 }
     .primary-content__doubles-container > * {
-        flex: 1;
+        flex: 1 1 280px;
+        min-width: 0;
     }

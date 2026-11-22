@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Design Spike</title>
     
-        <!-- Prism.js used to format text of the code sections -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <!-- Prism.js used to format text of the code sections -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
 
@@ -15,11 +15,15 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"></script>
     <!-- Prism syntax highlighting (core includes markup/html, css, clike, javascript) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+
+    <!-- Custom scripts for cards -->
     <script src="./scripts/2A.js" defer></script>
     <script src="./scripts/2B.js" defer></script>
     <script src="./scripts/2C.js" defer></script>
     <script src="./scripts/2D.js" defer></script>
-    <script src="./scripts/3.js" defer></script>
+    <script src="./scripts/3A.js" defer></script>
+    <script src="./scripts/3B.js" defer></script>
+    <script src="./scripts/4B.js" defer></script>
     
 </head>
 <body>
@@ -58,136 +62,12 @@
             </div>
         </div>
     </div>
-
-    <div class="bp-card">
-        <div class="bp-card__body">
-            <div class="bp-card__topic-container">
-                <span class="bp-card__topic-list">item 01 • gsap installation</span>
-                <span class="bp-card__topic-list bold-right">via CDN</span>
-            </div>
-            <div class="bp-card__primary-content">
-                <h3 class="bp-card__title">Installing the GSAP Library</h3>
-
-                <!-- Need to style each of these items -->
-                <!-- NEED TO ADD BACK FORM ELEMENT -->
-
-                    <!-- The two text fields -->
-                    <div class="bp-field">
-                        <label for="first-name">First Name:</label>
-                        <input 
-                            type="text" 
-                            id="first-name" 
-                            name="fname" 
-                            placeholder="Rusty"
-                            autocomplete="off"
-                            required>
-                    </div>
-                    <div class="bp-field">
-                        <label for="last-name">Last Name:</label>
-                        <input 
-                            type="text" 
-                            id="last-name"
-                            name="lname" 
-                            placeholder="Shackleford"
-                            autocomplete="off"
-                            required>
-                    </div>
-                    <div class="bp-field">
-                        <fieldset>
-                            <legend>Preferred Contact Method</legend>
-                            <div class="bp--radio-option">
-                                <input type="radio" id="contact-bottle" name="contact_method" value="bottle" required>
-                                <label for="contact-bottle">Message in a Bottle</label>
-                            </div>
-                            <div class="bp--radio-option">
-                                <input type="radio" id="contact-carrier-pigeon" name="contact_method" value="pigeon" required>
-                                <label for="contact-carrier-pigeon">Carrier Pigeon</label>
-                            </div>
-                            <div class="bp--radio-option">
-                                <input type="radio" id="contact-yahoo" name="contact_method" value="yahoo" required>
-                                <label for="contact-yahoo">Yahoo! Messenger</label>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div class="bp-field">
-                        <fieldset>
-                            <legend>Optional: Topics of Interest</legend>
-                            <div class="bp--radio-option">
-                                <input type="checkbox" id="interest-cheese" name="interests" value="cheese">
-                                <label for="interest-cheese">Cheese</label>
-                            </div>
-                            <div class="bp--radio-option">
-                                <input type="checkbox" id="interest-dogs" name="interests" value="dogs">
-                                <label for="interest-dogs">Dogs</label>
-                            </div>
-                            <div class="bp--radio-option">
-                                <input type="checkbox" id="interest-titanic" name="interests" value="titanic">
-                                <label for="interest-titanic">Titanic</label>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div class="bp-field">
-                        <label for="spice">Select Level of Spiciness:</label>
-                        <select id="spice" name="spice" required>
-                            <option value="">-- Choose one --</option>
-                            <option value="mild">Mild</option>
-                            <option value="medium">Medium</option>
-                            <option value="spicy">Spicy</option>
-                            <option value="extra-spicy">Extra Spicy</option>
-                        </select>
-                    </div>
-                    <div class="bp-field">
-                            <label for="comments">Mandatory comments:</label>
-                            <textarea 
-                                id="comments" 
-                                name="comments"
-                                rows="5" 
-                                cols="40"
-                                placeholder="What in the world is this form for?"
-                                required></textarea>
-                    </div>
-
-                <figure>
-                    <p class="code-title">greet.js</p>
-                    <pre><code class="language-javascript">const greet = (name) => {
-    const message = `Hello, ${name}!`;
-    console.log(message);
-};</code></pre>
-                    <figcaption>Arrow function that builds and logs a greeting. It's here just to take up space right now. So is this!</figcaption>
-                </figure>
-                <div class="button-container">
-                    <p>
-                        <button class="button-alt" type="submit">Cancel</button>
-                    </p>
-                    <p>
-                        <button class="button-std" type="submit">Submit</button>
-                    </p>
-                </div>
-                <!-- large item sandbox - icon going to be used to show orientation -->
-                <div class="bp-sandbox">
-                    <div class="bp-sandbox__object-large">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#FFFFFF"><path d="M12,10.8L7.4,15.4L6,14l6-6l6,6l-1.4,1.4L12,10.8Z"/></svg>
-                    </div>
-                </div>
-
-                <!-- small items sandbox - going to be used to show stagger -->
-                <div class="bp-sandbox">
-                    <div class="bp-sandbox__object-small--row">
-
-                        <div class="bp-sandbox__object-small"></div>
-                        <div class="bp-sandbox__object-small"></div>
-                        <div class="bp-sandbox__object-small"></div>
-                        <div class="bp-sandbox__object-small"></div>
-                        <div class="bp-sandbox__object-small"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    
+   
     <div class="step-container">
         <h2>STEP <span class="header-number">01</span> <span>INSTALLING GSAP</span></h2>
+
+        <div class="step-cards">
+        <!-- first card for step 01 -->
         <div class="bp-card">
             <div class="bp-card__body">
                 <div class="bp-card__topic-container">
@@ -214,6 +94,7 @@
                     </figure>
                 </div>
             </div>
+        </div>
         </div>
     </div>
     <div class="step-container alt">
@@ -434,12 +315,15 @@
         </div>
         </div>
     </div>
-        <div class="step-container">
+    <div class="step-container">
         <h2>STEP <span class="header-number">03</span> <span>Pacing Animations</span></h2>
+
+        <div class="step-cards">
+        <!-- first card for step 03 -->
         <div class="bp-card">
             <div class="bp-card__body">
                 <div class="bp-card__topic-container">
-                    <span class="bp-card__topic-list">item 03 • Animating Groups</span>
+                    <span class="bp-card__topic-list">item 03-A • Animating Groups</span>
                     <span class="bp-card__topic-list bold-right">via stagger</span>
                 </div>
                 <div class="bp-card__primary-content">
@@ -456,15 +340,15 @@
                     <div class="primary-content__doubles-container">
                         <div class="bp-sandbox">
                             <div class="bp-sandbox__object-small--row">
-                                <div class="bp-sandbox__object-small item-03__gsap-target"></div>
-                                <div class="bp-sandbox__object-small item-03__gsap-target"></div>
-                                <div class="bp-sandbox__object-small item-03__gsap-target"></div>
-                                <div class="bp-sandbox__object-small item-03__gsap-target"></div>
-                                <div class="bp-sandbox__object-small item-03__gsap-target"></div>
+                                <div class="bp-sandbox__object-small item-03a__gsap-target"></div>
+                                <div class="bp-sandbox__object-small item-03a__gsap-target"></div>
+                                <div class="bp-sandbox__object-small item-03a__gsap-target"></div>
+                                <div class="bp-sandbox__object-small item-03a__gsap-target"></div>
+                                <div class="bp-sandbox__object-small item-03a__gsap-target"></div>
                             </div>
                         </div>
                         <figure>
-                        <pre><code id="item-03__code" class="language-html">&lt;script&gt;
+                        <pre><code id="item-03a__code" class="language-html">&lt;script&gt;
    gsap.to(".box", { y: -30, stagger: 0.1 })
 &lt;/script&gt;</code></pre>
                         </figure>
@@ -472,13 +356,13 @@
 
                     <div class="button-container">
                         <p>
-                            <button id="item-03__reset" class="button-alt" type="button">Reset</button>
+                            <button id="item-03a__reset" class="button-alt" type="button">Reset</button>
                         </p>
                         <p>
-                            <button id="item-03__play" class="button-std" type="button">Play</button>
+                            <button id="item-03a__play" class="button-std" type="button">Play</button>
                         </p>
                         <p>
-                            <select id="item-03__stagger">
+                            <select id="item-03a__stagger">
                                 <option value="0">0s (no stagger)</option>
                                 <option value="0.1" selected>0.1s</option>
                                 <option value="0.25">0.25s</option>
@@ -489,6 +373,192 @@
 
                 </div>
             </div>
+        </div>
+
+        <!-- second card for step 03 -->
+        <div class="bp-card">
+            <div class="bp-card__body">
+                <div class="bp-card__topic-container">
+                    <span class="bp-card__topic-list">item 03-B • Easing</span>
+                    <span class="bp-card__topic-list bold-right">via ease</span>
+                </div>
+                <div class="bp-card__primary-content">
+                    <h3 class="bp-card__title">Changing the Feel: ease</h3>
+                    <div>
+                        <p>
+                            An ease controls how fast the object moves at each point of the animation. It doesn't change where the object starts or ends, or how long the animation takes, just how the speed is spread out along the way.
+                        </p>
+                        <p>
+                            By default GSAP uses "power1.out", which starts fast and slows down at the end. "none" moves at the same speed the whole time. Eases ending in .in start slow, .out end slow, and .inOut do both. Some eases go further, like back, which overshoots, elastic, which springs, and bounce, which bounces. CSS has basic eases like ease-in-out, but bounce and elastic are much harder to pull off there.
+                        </p>
+                        <p>
+                            Box 1 always uses "none" so you have something to compare against. Pick an ease for box 2 and hit play. I'm especially a fan of bounce.out and elastic.out! :)
+                        </p>
+                    </div>
+
+                    <div class="primary-content__doubles-container">
+                        <div class="bp-sandbox" style="height: 200px">
+                            <div id="item-03b__gsap-target-1" class="bp-sandbox__object-large">
+                                1
+                            </div>
+                            <div id="item-03b__gsap-target-2" class="bp-sandbox__object-large" style="top:130px">
+                                2
+                            </div>
+                        </div>
+                        <figure>
+                        <pre><code id="item-03b__code" class="language-html">&lt;script&gt;
+   gsap.to(".box__1", { x: 200, duration: 1, ease: "none" })
+   gsap.to(".box__2", { x: 200, duration: 1, ease: "power1.out" })
+&lt;/script&gt;</code></pre>
+                        </figure>
+                    </div>
+
+                    <div class="button-container">
+                        <p>
+                            <button id="item-03b__reset" class="button-alt" type="button">Reset</button>
+                        </p>
+                        <p>
+                            <button id="item-03b__play" class="button-std" type="button">Play</button>
+                        </p>
+                        <p>
+                            <select id="item-03b__ease">
+                                <option value="power1.out" selected>power1.out (default)</option>
+                                <option value="power2.inOut">power2.inOut</option>
+                                <option value="expo.in">expo.in</option>
+                                <option value="back.out(1.7)">back.out(1.7)</option>
+                                <option value="elastic.out(1, 0.3)">elastic.out(1, 0.3)</option>
+                                <option value="bounce.out">bounce.out</option>
+                                <option value="steps(5)">steps(5)</option>
+                            </select>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="step-container alt">
+        <h2>STEP <span class="header-number">04</span> <span>USING PLUG-INS</span></h2>
+        
+        <div class="step-cards">
+        <div class="bp-card">
+            <div class="bp-card__body">
+                <div class="bp-card__topic-container">
+                    <span class="bp-card__topic-list">item 04-A • Extending GSAP with Plug-ins</span>
+                    <span class="bp-card__topic-list bold-right">via ScrollTrigger</span>
+                </div>
+                <div class="bp-card__primary-content">
+                    <h3 class="bp-card__title">Introduction to adding plug-ins to GSAP</h3>
+                    <div>
+                        <p>
+                            Much like jQuery, GSAP has an array of plugins that extend what it can do and enable things that, while possible in vanilla javascript, are immensely easier to pull off once added in.
+                        </p>
+                        <p>
+                            GSAP plug-ins will let you do stuff like add even more ease options than what the last card showed you (CustomeEase), let you animate SVGs to look as if they were drawn right onto the page (DrawSVG), or you can set all your GSAP animations to trigger at scrollpoints on the screen with ScrollTrigger
+                        </p>
+                        <p>
+                            As a reminder, we included more than one CDN at the beginning of this lesson. Please verify you put all three of them at the top of your page before moving on.
+                        </p>
+                    </div>
+
+                    <figure>
+                        <p class="code-title">index.html</p>
+                        <pre><code class="language-html">&lt;head&gt;
+    ...
+    &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"&gt;&lt;/script&gt;
+    &lt;!-- GSAP Plugins we will also use --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+                    </figure>
+
+
+                    <div class="button-container">
+                        <p>
+                            <button id="item-02__reset" class="button-alt" type="button">Reset</button>
+                        </p>
+                        <p>
+                            <button id="item-02__play" class="button-std" type="button">Play</button>
+                        </p>
+                        <p>
+                            <select id="item-02__distance">
+                                <option value="50">50px</option>
+                                <option value="100">100px</option>
+                                <option value="200" selected>200px</option>
+                            </select>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- second card for step 04 -->
+        <div class="bp-card">
+            <div class="bp-card__body">
+                <div class="bp-card__topic-container">
+                    <span class="bp-card__topic-list">item 04-B • Exploring ScrollTrigger</span>
+                    <span class="bp-card__topic-list bold-right">via ScrollTrigger</span>
+                </div>
+                <div class="bp-card__primary-content">
+                    <h3 class="bp-card__title">Animating on Scroll: ScrollTrigger</h3>
+                    <div>
+                        <p>
+                            ScrollTrigger connects a tween to a scroll position. Instead of a button starting the animation, the animation starts when its trigger element scrolls past an invisible start line, and finishes at an invisible end line.
+                        </p>
+                        <p>
+                            You add it with a scrollTrigger object inside the tween. "trigger" is the element to watch, and "start" and "end" say where the lines are. For example, "top 80%" means the animation starts when the top of the trigger reaches 80% of the way down the scroll area. You will usually want the start to be below the end, as we scroll top to bottom on a page. to visually see the start and end, we can use markers: true during development to put lines visually on the page.
+                        </p>
+                        <p>
+                            The demo below scrolls on its own, so scroll inside the box. Try the modes: "Play / reverse" plays the tween once it crosses the start line and reverses it when you scroll back up, "Scrub" ties the animation directly to your scrollbar, and "Smooth scrub" does the same but lets the box catch up over a second.
+                        </p>
+                    </div>
+
+                    <div class="primary-content__doubles-container">
+                        <div id="item-04b__scroller" class="bp-sandbox scroll-demo">
+                            <p class="scroll-demo__hint">scroll inside me ↓</p>
+                            <div class="scroll-demo__spacer"></div>
+                            <div id="item-04b__gsap-target" class="bp-sandbox__object-large">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#FFFFFF"><path d="M12,10.8L7.4,15.4L6,14l6-6l6,6l-1.4,1.4L12,10.8Z"/></svg>
+                            </div>
+                            <div class="scroll-demo__spacer"></div>
+                        </div>
+                        <figure>
+                        <pre><code id="item-04b__code" class="language-html">&lt;script&gt;
+   gsap.registerPlugin(ScrollTrigger);
+
+   gsap.to(".box", {
+      x: 200,
+      rotation: 360,
+      scrollTrigger: {
+         trigger: ".box",
+         scroller: ".sandbox",
+         start: "top 80%",
+         end: "top 20%",
+         toggleActions: "play none none reverse",
+         markers: true
+      }
+   })
+&lt;/script&gt;</code></pre>
+                        </figure>
+                    </div>
+
+                    <div class="button-container">
+                        <p>
+                            <select id="item-04b__mode">
+                                <option value="toggle" selected>Play / reverse</option>
+                                <option value="scrub">Scrub</option>
+                                <option value="smooth">Smooth scrub</option>
+                            </select>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
         </div>
     </div>
 </body>
