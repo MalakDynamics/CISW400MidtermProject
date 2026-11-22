@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Design Spike</title>
+    
+        <!-- Prism.js used to format text of the code sections -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"></script>
+    <!-- Prism syntax highlighting (core includes markup/html, css, clike, javascript) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    
 </head>
 <body>
     
@@ -44,7 +55,7 @@
                 <span class="bp-card__topic-list bold-right">via CDN</span>
             </div>
             <div class="bp-card__primary-content">
-                <h2 class="bp-card__title">Installing the GSAP Library</h2>
+                <h3 class="bp-card__title">Installing the GSAP Library</h3>
 
                 <!-- Need to style each of these items -->
                 <!-- NEED TO ADD BACK FORM ELEMENT -->
@@ -125,43 +136,167 @@
                                 required></textarea>
                     </div>
 
-<figure>
-    <p class="code-title">greet.js</p>
-    <pre><code class="language-javascript">const greet = (name) => {
+                <figure>
+                    <p class="code-title">greet.js</p>
+                    <pre><code class="language-javascript">const greet = (name) => {
     const message = `Hello, ${name}!`;
     console.log(message);
 };</code></pre>
-    <figcaption>Arrow function that builds and logs a greeting. It's here just to take up space right now. So is this!</figcaption>
-</figure>
-<div class="button-container">
-    <p>
-        <button class="button-alt" type="submit">Cancel</button>
-    </p>
-    <p>
-        <button class="button-std" type="submit">Submit</button>
-    </p>
-</div>
-<!-- large item sandbox - icon going to be used to show orientation -->
-<div class="bp-sandbox">
-    <div class="bp-sandbox__object-large">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#FFFFFF"><path d="M12,10.8L7.4,15.4L6,14l6-6l6,6l-1.4,1.4L12,10.8Z"/></svg>
-    </div>
-</div>
+                    <figcaption>Arrow function that builds and logs a greeting. It's here just to take up space right now. So is this!</figcaption>
+                </figure>
+                <div class="button-container">
+                    <p>
+                        <button class="button-alt" type="submit">Cancel</button>
+                    </p>
+                    <p>
+                        <button class="button-std" type="submit">Submit</button>
+                    </p>
+                </div>
+                <!-- large item sandbox - icon going to be used to show orientation -->
+                <div class="bp-sandbox">
+                    <div class="bp-sandbox__object-large">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#FFFFFF"><path d="M12,10.8L7.4,15.4L6,14l6-6l6,6l-1.4,1.4L12,10.8Z"/></svg>
+                    </div>
+                </div>
 
-<!-- small items sandbox - going to be used to show stagger -->
-<div class="bp-sandbox">
-    <div class="bp-sandbox__object-small--row">
+                <!-- small items sandbox - going to be used to show stagger -->
+                <div class="bp-sandbox">
+                    <div class="bp-sandbox__object-small--row">
 
-        <div class="bp-sandbox__object-small"></div>
-        <div class="bp-sandbox__object-small"></div>
-        <div class="bp-sandbox__object-small"></div>
-        <div class="bp-sandbox__object-small"></div>
-        <div class="bp-sandbox__object-small"></div>
-    </div>
-</div>
+                        <div class="bp-sandbox__object-small"></div>
+                        <div class="bp-sandbox__object-small"></div>
+                        <div class="bp-sandbox__object-small"></div>
+                        <div class="bp-sandbox__object-small"></div>
+                        <div class="bp-sandbox__object-small"></div>
+                    </div>
+                </div>
 
             </div>
         </div>
     </div>
+    
+    <div class="step-container">
+        <h2>STEP <span class="header-number">01</span> <span>INSTALLING GSAP</span></h2>
+        <div class="bp-card">
+            <div class="bp-card__body">
+                <div class="bp-card__topic-container">
+                    <span class="bp-card__topic-list">item 01 • gsap installation</span>
+                    <span class="bp-card__topic-list bold-right">via CDN</span>
+                </div>
+                <div class="bp-card__primary-content">
+                    <h3 class="bp-card__title">Installing the GSAP Library</h3>
+                    <p>
+                        For this example, we will rely on a CDN to deliver the GSAP library. GPaste these script tags inside the &lt;head&gt; of your starter file, right after the stylesheet link:
+                    </p>
+                    <figure>
+                        <p class="code-title">index.html</p>
+                        <pre><code class="language-html">&lt;head&gt;
+    ...
+    &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"&gt;&lt;/script&gt;
+    &lt;!-- GSAP Plugins we will also use --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="step-container alt">
+        <h2>STEP <span class="header-number">02</span> <span>Basic Movements</span></h2>
+        <div class="bp-card">
+            <div class="bp-card__body">
+                <div class="bp-card__topic-container">
+                    <span class="bp-card__topic-list">item 02 • Moving Objects with GSAP</span>
+                    <span class="bp-card__topic-list bold-right">via gsap.to()</span>
+                </div>
+                <div class="bp-card__primary-content">
+                    <h3 class="bp-card__title">Moving Obects With GSAP: gsap.to()</h3>
+                    <div>
+                        <p>
+                            The most basic way to move an object with GSAP is the gsap.to() function. In gsap, this instruction is called a 'tween.'
+                        </p>
+                        <p>
+                            These more basic movements are easily accomplished with CSS classes, but let's start with just trying to move an object.
+                            gsap.to() will move an object from it's original position to a new position that you define in its variables.
+                        </p>
+                        <p>
+                            The parameters taken are a target object, written as you would a querySelector target ('.box', '#box', etc.), and an object with all the properties for the animations like positioning and appearence.
+                        </p>
+                    </div>
+
+                    <div class="primary-content__doubles-container">
+                        <div class="bp-sandbox">
+                            <div id="item-02__gsap-target" class="bp-sandbox__object-large">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#FFFFFF"><path d="M12,10.8L7.4,15.4L6,14l6-6l6,6l-1.4,1.4L12,10.8Z"/></svg>
+                            </div>
+                        </div>
+                        <figure>
+                        <pre><code id="item-02__code" class="language-html">&lt;script&gt;
+   gsap.to(".box", { x: 200 })
+&lt;/script&gt;</code></pre>
+                        </figure>
+                    </div>
+
+
+                    <div class="button-container">
+                        <p>
+                            <button id="item-02__reset" class="button-alt" type="button">Reset</button>
+                        </p>
+                        <p>
+                            <button id="item-02__play" class="button-std" type="button">Play</button>
+                        </p>
+                        <p>
+                            <select id="item-02__distance" aria-label="Distance in pixels">
+                                <option value="50">50px</option>
+                                <option value="100">100px</option>
+                                <option value="200" selected>200px</option>
+                            </select>
+                        </p>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // ==========================================================
+        // Item 02: gsap.to() demo, pause it for demo
+        // ==========================================================
+        let item02Tween = gsap.to("#item-02__gsap-target", { x: 200, paused: true });
+
+        // play button wired to animation, auto-play was miserable, more advanced than what demo shows but
+        // willing to compromise to make it more enjoyable as a lesson.
+        document.getElementById("item-02__play").addEventListener("click", function () {
+            item02Tween.restart();
+        });
+
+        // send the box back to the start and hold it there so it doesn't just auto-play
+        document.getElementById("item-02__reset").addEventListener("click", function () {
+            item02Tween.pause(0);
+        });
+        
+        // on change, kill old gsap, replace with new selected value, restart gsap
+        document.getElementById("item-02__distance").addEventListener("change", function () {
+            const distance = this.value;
+
+            item02Tween.kill();
+            gsap.set("#item-02__gsap-target", { x: 0 });
+            item02Tween = gsap.to("#item-02__gsap-target", { x: distance, paused: true });
+
+            // CHange the code shown
+            const code = document.getElementById("item-02__code");
+            code.innerHTML = `&lt;script&gt;
+   gsap.to(".box", { x: ${distance} })
+&lt;/script&gt;`;
+            // Prism to style the code again
+            Prism.highlightElement(code);
+        });
+
+
+
+
+    </script>
 </body>
 </html>

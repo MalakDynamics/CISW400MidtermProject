@@ -226,8 +226,8 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     background-color: var(--paper);
-    background-image: linear-gradient(var(--grid-major) var(--line-thick), transparent var(--line-thick)),
-    linear-gradient(90deg, var(--grid-major) var(--line-thick), transparent var(--line-thick)),
+    background-image: linear-gradient(var(--grid-minor) var(--line-thick), transparent var(--line-thick)),
+    linear-gradient(90deg, var(--grid-minor) var(--line-thick), transparent var(--line-thick)),
     linear-gradient(var(--grid-minor) var(--line-thin), transparent var(--line-thin)),
     linear-gradient(90deg, var(--grid-minor) var(--line-thin), transparent var(--line-thin));
     background-size: var(--space-10) var(--space-10), var(--space-10) var(--space-10),
@@ -280,7 +280,6 @@ h1 {
 }
 .bp-card {
     border: var(--line-thick) solid var(--ink);
-    width: 100%;
 }
     .bp-card__body {
         display: flex;
@@ -331,6 +330,7 @@ h1 {
     font-size: 1rem;
     line-height: 1.5rem;
     color: var(--ink-muted);
+    margin-bottom: 0.5rem;
 }
 
 .bp-card__footer {
@@ -394,6 +394,7 @@ input {
     padding: 0.625rem 0.5rem;
 
     /* sets the focus crosshairs look. come back to this and explore other options this feels excessive for what it does. */
+    /* this whole project has been excessive...it's probably staying, sorry future-me */
     background-image: 
         linear-gradient(var(--highlight), var(--highlight)), 
         linear-gradient(var(--highlight), var(--highlight)), 
@@ -601,14 +602,18 @@ figure {
     gap: 4px;
     max-width: 100%;
 }
-pre {
-    font-size: 1rem;
-    line-height: 1.25rem;
-    font-family: var(--font-mono);
-    padding: 1.25rem;
+
+pre,
+pre[class="language-html"] {
+    margin: 0;
     border: var(--line-thin) solid var(--ink);
-    background-color: var(--paper);
     overflow-x: auto;
+    font-size: 0.875rem;
+}
+code[class="language-html"],
+pre[class="language-html"] {
+    font-family: var(--font-mono);
+    text-shadow: none;
 }
     figcaption {    
         font-size: 1rem;
@@ -626,6 +631,9 @@ pre {
     gap: 1rem;
     width: fit-content;
 }
+    .button-container > p {
+        display: flex;
+    }
 
 .button-std,
 .button-alt {
@@ -664,7 +672,8 @@ pre {
 
 .bp-sandbox {
     height: 100px;
-    max-width: 400px;
+    max-width: 100%;
+    min-width: 280px;
     border: var(--line-thin) solid var(--ink);
 
     background-color: var(--paper);
@@ -714,3 +723,58 @@ pre {
     border: var(--line-thick) solid var(--ink);
     background-color: var(--paper-deep);
 }
+
+h2 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    line-height: 1;
+    height: fit-content;
+    white-space: nowrap;
+    flex: 1;
+    max-width: 600px;
+    padding: 0rem 1rem;
+}
+    h2 > span:last-child {
+        grid-column: 1 / -1;
+        font-size: 3rem;
+    }
+    h2 .header-number {
+        justify-self: baseline;
+        color: var(--ink-muted);
+        display: inline-block;
+        transform: scalex(0.8);
+
+    }
+
+.step-container {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start; 
+}
+    .step-container > .bp-card {
+    max-width: 56.25rem;
+
+    }
+
+.step-container.alt {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.primary-content__doubles-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    min-height: 100px;
+    gap: 10px;
+
+}
+    .primary-content__doubles-container > * {
+        flex: 1;
+    }
