@@ -226,6 +226,20 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-display);
+}
+
+/* blueprint grid on its own div, not smooth on body */
+#grid-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(100% + var(--space-10));   /* one extra tile to slide into */
+    z-index: -1;
+    will-change: transform;
+
     background-image: linear-gradient(var(--grid-minor) var(--line-thick), transparent var(--line-thick)),
     linear-gradient(90deg, var(--grid-minor) var(--line-thick), transparent var(--line-thick)),
     linear-gradient(var(--grid-minor) var(--line-thin), transparent var(--line-thin)),
@@ -233,18 +247,15 @@ body {
     background-size: var(--space-10) var(--space-10), var(--space-10) var(--space-10),
     var(--space-2) var(--space-2), var(--space-2) var(--space-2);
     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-    background-attachment: fixed;
-    
-    color: var(--ink);
-    font-family: var(--font-display);
-    
+}
+
+#smooth-content {
     padding: 2rem 1rem;
     
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
-    /* position: fixed; */
+    gap: 20rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -500,7 +511,8 @@ fieldset {
     background: transparent;
 }
     .bp--radio-option > label { /* Dear Shae, I know you're going to be responsible and fix this, right? RIGHT!?! */
-                                /* Maybe tomorrow.... */
+                                /* Maybe tomorrow.... */    
+                                /* I'm disappointed but not surprised... */
         font-family: var(--font-display);
         font-size: 1rem;
         text-transform: none;
@@ -712,7 +724,7 @@ pre[class="language-html"] {
         height: 300px;
     }
     .scroll-demo .bp-sandbox__object-large {
-        position: relative; /* position: absolute wasn't working */
+        position: relative; 
         top: auto;
         left: 30px;
     }
@@ -788,7 +800,7 @@ h2 {
 .step-cards {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 30rem;
     max-width: 56.25rem;
 }
 
