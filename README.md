@@ -61,13 +61,6 @@ Demo ideas:
 
 ---
 
-## Open Questions
-
-- [x] Stick with BEM for CSS?
-- **Answer:** Yes.....badly so far but yes 
-- [x] Build a custom CSS Root?
-- **Answer:** Yes...at root of system.
-
 ## Sources/ Inspiration: 
 [CSS3 Patterns Gallery (Lea Verou)](https://projects.verou.me/css3patterns/), "Blueprint grid"
 [Reveal animations based on scroll direction - ScrollTrigger](https://codepen.io/GreenSock/pen/pojzxwZ), "GSAP Inspiration Animation"
