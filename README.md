@@ -1,6 +1,6 @@
 # Blueprint Design System
 
-A small design system built on the **Engineering Blueprint** background pattern, plus a GSAP playground for showing off animations and teaching users.
+GSAP playground for showing off animations and teaching users basics of GSAP, with custom CSS system built off the initial inspiration of the **Engineering Blueprint** background pattern. Most GSAP in project taught in class except for Header Pin technique and background parallax effect that was harder to teach within 15-30 minute time constraints.
 
 ---
 
@@ -15,9 +15,9 @@ A small design system built on the **Engineering Blueprint** background pattern,
 
 ## Typography
 
-- Pick fonts (check licenses: Google Fonts is easiest)
-- Decide whether accent and annotation can share one font
- - Define a type scale (sizes, line heights, weights)
+- IBM Plex Sans Condensed
+- IBM Plex Mono
+- Saved to files with [Google Webfonts Helper](https://gwfh.mranftl.com/fonts)
 
 ---
 
