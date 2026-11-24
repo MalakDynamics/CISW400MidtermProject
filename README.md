@@ -63,6 +63,9 @@ Demo ideas:
 
 ## Sources/ Inspiration: 
 [CSS3 Patterns Gallery (Lea Verou)](https://projects.verou.me/css3patterns/), "Blueprint grid"
+
 [Reveal animations based on scroll direction - ScrollTrigger](https://codepen.io/GreenSock/pen/pojzxwZ), "GSAP Inspiration Animation"
+
 [GSAP Documentation](https://gsap.com/docs/v3/), "GSAP Documentation"
+
 [Prism.js Documentation](https://prismjs.com/docs/), "Prism.js Documentation"
