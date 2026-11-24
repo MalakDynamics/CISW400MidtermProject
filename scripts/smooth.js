@@ -10,16 +10,29 @@
     // keep rotating through that 100px to give a parallax effect.
 
     const PERCENT_BACKGROUND_MOVES = 0.2;
-    const TILE = 100;       // tricks pattern to loop through one tile over and over
+    const PATTERN_TILE_HEIGHT = 100;
+
+    function moveGrid(el) {
+        gsap.set("#grid-bg", { y: -(el.scrollTop() * PERCENT_BACKGROUND_MOVES % PATTERN_TILE_HEIGHT) });
+    }
 
     ScrollSmoother.create({
         wrapper: "#smooth-wrapper",
         content: "#smooth-content",
         effects: true,
         smoothTouch: 0.1,
-        onUpdate: function (el) {
-            gsap.set("#grid-bg", { y: -(el.scrollTop() * PERCENT_BACKGROUND_MOVES % TILE) });
-        }
+        onUpdate: moveGrid
+    });
+
+    // handle details open page length change
+
+    document.querySelectorAll("details").forEach(function (details) {
+        details.addEventListener("toggle", function () {
+            ScrollTrigger.refresh();
+        });
+    });
+    ScrollTrigger.addEventListener("refresh", function () {
+        moveGrid(ScrollSmoother.get());
     });
 
     // ==========================================================================
@@ -30,7 +43,6 @@
     gsap.utils.toArray(".step-container").forEach(function(section) {
         const heading = section.querySelector("h2");
 
-
         ScrollTrigger.create({
             trigger: section,
             pin: heading,
@@ -38,7 +50,7 @@
             start: `top ${H2_Y_POSITION}%`,
             end: function() { return `bottom ${H2_Y_POSITION}%+=${heading.offsetHeight}`;},
             invalidateOnRefresh: true,
-            markers: true
+            // markers: true
         });
 
         gsap.from(heading.children, {
@@ -83,6 +95,8 @@
 })();
     // ==========================================================================
     // Animated card reveal - Inspiration code
+    // src: https://codepen.io/GreenSock/pen/pojzxwZ
+    // Granted it has changed a lot from this.....this got away from me.
     // ==========================================================================
 //     function animateFrom(elem, direction) {
 //         direction = direction || 1;

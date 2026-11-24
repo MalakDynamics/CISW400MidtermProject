@@ -62,7 +62,14 @@
   font-weight: 500;
   src: url('./fonts/ibm-plex-sans-condensed-v15-latin/ibm-plex-sans-condensed-v15-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
+/* ibm-plex-sans-condensed-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/ibm-plex-sans-condensed-v15-latin/ibm-plex-sans-condensed-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 /* ibm-plex-mono-200 - latin */
 @font-face {
@@ -167,7 +174,7 @@
     --font-display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
     --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 }
-/* CSS RESETS */
+/* CSS RESETS from Josh Comeau*/
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -254,9 +261,13 @@ body {
     
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 20rem;
+    align-items: center;
+    gap: 40rem;
 }
+    #smooth-content > * {
+        width: 100%;
+        max-width: 93.75rem;
+    }
 
 h1, h2, h3, h4, h5, h6 {
     display: inline-block;
@@ -269,6 +280,7 @@ h1 {
     font-weight: 600;
     letter-spacing: 0.12rem;
     text-transform: uppercase;
+    padding-bottom: 1rem;
 }
 
 .title-card__main {
@@ -326,7 +338,7 @@ h1 {
         padding: 1.25rem;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: var(--space-2);
     }
 
     .bp-card__title {
@@ -334,7 +346,7 @@ h1 {
         font-size: 1.5rem;
         line-height: 1.75rem;
         font-weight: 600;
-        letter-spacing: 0.12rem;
+        letter-spacing: 0.1rem;
     }
 
 .bp-card p {
@@ -356,7 +368,7 @@ h1 {
 .bp-card__footer-item {
     background-color: var(--paper-deep);
     flex: 1 1 180px;
-    padding: 10px 20px;
+    padding: var(--space-1) var(--space-2);
     display: inline-flex;
     font-family: var(--font-mono);
     font-weight: 600;
@@ -474,17 +486,6 @@ input {
             outline: var(--line-thick) solid var(--highlight);
             outline-offset: var(--line-thick);
         }
-label,
-legend,
-p.code-title {
-    text-transform: uppercase;
-    color: var(--ink);
-    font-size: 0.75rem;
-    font-weight: 500;
-    line-height: 1rem;
-    font-family: var(--font-mono);
-    letter-spacing: 0.04rem;
-}
 
 fieldset {
     display: flex;
@@ -562,8 +563,8 @@ select,
 
 
 select {
-    min-height: 40px;
-    padding: 10px;
+    min-height: var(--space-4);
+    padding: var(--space-1);
     cursor: pointer;
     color: var(--ink);
 }
@@ -582,7 +583,7 @@ select {
         color: var(--ink);
     }
 select option {
-    padding: 10px 6px;
+    padding: var(--space-1) 6px;
 }
 select option:hover {
     background-color: var(--ink);
@@ -616,14 +617,14 @@ figure {
 }
 
 pre,
-pre[class="language-html"] {
+pre[class*="language-"] {
     margin: 0;
     border: var(--line-thin) solid var(--ink);
     overflow-x: auto;
     font-size: 0.875rem;
 }
-code[class="language-html"],
-pre[class="language-html"] {
+code[class*="language-"],
+pre[class*="language-"] {
     font-family: var(--font-mono);
     text-shadow: none;
 }
@@ -683,7 +684,7 @@ pre[class="language-html"] {
 
 
 .bp-sandbox {
-    height: 100px;
+    height: var(--space-10);
     max-width: 100%;
     min-width: 280px;
     border: var(--line-thin) solid var(--ink);
@@ -700,8 +701,8 @@ pre[class="language-html"] {
     position: relative
 }
 .bp-sandbox__object-large {
-    height: 40px;
-    width: 40px;
+    height: var(--space-4);
+    width: var(--space-4);
     border: var(--line-thick) solid var(--ink);
     background-color: var(--paper-deep);
 
@@ -780,8 +781,8 @@ h2 {
 
     display: flex;
 
-    align-items: center;
-    justify-content: flex-start; 
+    align-items: flex-start;
+    justify-content: flex-start;
 }
     .step-container > .bp-card {
     max-width: 56.25rem;
@@ -793,24 +794,94 @@ h2 {
     justify-content: flex-end;
 }
 
-.step-container:has(> .step-cards) {
-    align-items: flex-start;
-}
-
 .step-cards {
     display: flex;
     flex-direction: column;
     gap: 30rem;
-    max-width: 56.25rem;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 56.25rem;
+    min-width: 0;
 }
 
 .primary-content__doubles-container {
     display: flex;
     flex-wrap: wrap-reverse;
-    min-height: 100px;
-    gap: 10px;
+    min-height: var(--space-10);
+    gap: var(--space-1);
 }
     .primary-content__doubles-container > * {
         flex: 1 1 280px;
         min-width: 0;
     }
+
+.title {
+    margin-top: 10rem;
+    max-width: 60rem !important; /* this is where it went off the rails */
+}
+
+details {
+    border-top: var(--line-thin) solid var(--ink);
+    background-color: var(--paper);
+}
+
+summary {
+    background-color: var(--paper-deep);
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+}
+    .summary__label {
+        text-transform: uppercase;
+        font-family: var(--font-mono);
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.08rem;
+        color: var(--ink-muted);
+    }
+    summary:hover .summary__label {
+        color: var(--ink);
+    }
+    summary > p,
+    summary > ol {
+        margin-top: 0.75rem;
+    }
+    summary:focus-visible {
+        outline: var(--line-thick) solid var(--highlight);
+        outline-offset: -2px;
+    }
+
+.details__content {
+    border-top: var(--line-thin) solid var(--ink);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+    summary p,
+    summary li,
+    .details__content p,
+    .details__content li {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: var(--ink-muted);
+    }
+    summary ol,
+    .details__content ol {
+        padding-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+/* Something above conflicted and I embraced my inner messiness */
+label,
+legend,
+p.code-title {
+    text-transform: uppercase;
+    color: var(--ink);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.04rem;
+}

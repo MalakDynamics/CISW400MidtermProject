@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Starter File</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- paste the GSAP CDN script tags here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <!-- DO NOT TOUCH SCRIPTS BELOW -->
+    <!-- one script per challenge -->
+    <script src="./scripts/2A.js" defer></script>
+    <script src="./scripts/2B.js" defer></script>
+    <script src="./scripts/2C.js" defer></script>
+    <script src="./scripts/2D.js" defer></script>
+    <script src="./scripts/3A.js" defer></script>
+    <script src="./scripts/3B.js" defer></script>
+    <script src="./scripts/4B.js" defer></script>
+</head>
+<body>
+
+    <!-- title card -->
+    <div class="bp-card title">
+        <div class="title-card__main">
+            <span class="bp-card__topic-list">starter file • GSAP animations</span>
+            <h1>Follow along: GSAP challenges</h1>
+            <p>Try out each of these challenges as you ready through the main page. Each of these challenges have an associated javascript file, with it's target already pre-selected. If you get stuck, be sure to use the hints on the lesson page.</p>
+        </div>
+        <div class="bp-card__footer">
+            <div class="bp-card__footer-item">
+                <div class="bp-card__footer-label">sheet</div>
+                <div class="bp-card__footer-value">01 of 01</div>
+            </div>
+            <div class="bp-card__footer-item">
+                <div class="bp-card__footer-label">rev</div>
+                <div class="bp-card__footer-value">C</div>
+            </div>
+            <div class="bp-card__footer-item">
+                <div class="bp-card__footer-label">library</div>
+                <div class="bp-card__footer-value">gsap</div>
+            </div>
+            <div class="bp-card__footer-item">
+                <div class="bp-card__footer-label">type</div>
+                <div class="bp-card__footer-value">lesson page</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 02-A -->
+    <section class="step-container">
+        <h2><span>ITEM</span> <span class="header-number">02-A</span> <span>GSAP.to()</span></h2>
+        <div class="bp-card bp-card__body fly-right">
+            <div class="bp-card__topic-container">
+                <span class="bp-card__topic-list">item 02-A • Moving Objects with GSAP</span>
+                <span class="bp-card__topic-list bold-right">via gsap.to()</span>
+            </div>
+            <div class="bp-card__primary-content">
+                <p class="code-title">edit: scripts/2A.js</p>
+                <h3 class="bp-card__title">Moving Objects With GSAP: gsap.to()</h3>
+                <p>When it works: Play slides the box to the right, and Reset slides it back to where it started.</p>
+                <div class="bp-sandbox">
+                    <div id="item-02__gsap-target" class="bp-sandbox__object-large">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#FFFFFF"><path d="M12,10.8L7.4,15.4L6,14l6-6l6,6l-1.4,1.4L12,10.8Z"/></svg>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button id="item-02__reset" class="button-alt" type="button">Reset</button>
+                    <button id="item-02__play" class="button-std" type="button">Play</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02-B -->
+    <section class="step-container">
+        <h2><span>ITEM</span> <span class="header-number">02-B</span> <span>GSAP.to()</span></h2>
+        <div class="bp-card bp-card__body fly-right">
+            <div class="bp-card__topic-container">
+                <span class="bp-card__topic-list">item 02-B • combining transformations</span>
+                <span class="bp-card__topic-list bold-right">via gsap.to()</span>
+            </div>
+            <div class="bp-card__primary-content">
+                <p class="code-title">edit: scripts/2B.js</p>
+                <h3 class="bp-card__title">Adding Rotation: gsap.to()</h3>
+                <p>When it works: Play moves the box to the right and spins it at the same time, and Reset brings it back and turns it upright again.</p>
+                <div class="bp-sandbox">
+                    <div id="item-02b__gsap-target" class="bp-sandbox__object-large">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#FFFFFF"><path d="M12,10.8L7.4,15.4L6,14l6-6l6,6l-1.4,1.4L12,10.8Z"/></svg>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button id="item-02b__reset" class="button-alt" type="button">Reset</button>
+                    <button id="item-02b__play" class="button-std" type="button">Play</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02-C -->
+    <section class="step-container">
+        <h2><span>ITEM</span> <span class="header-number">02-C</span> <span>GSAP.from()</span></h2>
+        <div class="bp-card bp-card__body fly-right">
+            <div class="bp-card__topic-container">
+                <span class="bp-card__topic-list">item 02-C • Defining the Start</span>
+                <span class="bp-card__topic-list bold-right">via gsap.from()</span>
+            </div>
+            <div class="bp-card__primary-content">
+                <p class="code-title">edit: scripts/2C.js</p>
+                <h3 class="bp-card__title">Starting Point: gsap.from()</h3>
+                <p>When it works: Play makes the box jump out to the right and slide back to its normal spot, and Reset puts it back at the start.</p>
+                <div class="bp-sandbox">
+                    <div id="item-02c__gsap-target" class="bp-sandbox__object-large">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#FFFFFF"><path d="M12,10.8L7.4,15.4L6,14l6-6l6,6l-1.4,1.4L12,10.8Z"/></svg>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button id="item-02c__reset" class="button-alt" type="button">Reset</button>
+                    <button id="item-02c__play" class="button-std" type="button">Play</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02-D -->
+    <section class="step-container">
+        <h2><span>ITEM</span> <span class="header-number">02-D</span> <span>GSAP.fromTo()</span></h2>
+        <div class="bp-card bp-card__body fly-right">
+            <div class="bp-card__topic-container">
+                <span class="bp-card__topic-list">item 02-D • Start-Finish Control</span>
+                <span class="bp-card__topic-list bold-right">via gsap.fromTo()</span>
+            </div>
+            <div class="bp-card__primary-content">
+                <p class="code-title">edit: scripts/2D.js</p>
+                <h3 class="bp-card__title">Start to Finish: gsap.fromTo()</h3>
+                <p>When it works: "Play .to()" moves box 1 only on the first click, "Play .fromTo()" replays box 2 from the start on every click, and Reset brings both boxes back.</p>
+                <div class="bp-sandbox" style="height: 200px">
+                    <div id="item-02d__gsap-target-1" class="bp-sandbox__object-large">1</div>
+                    <div id="item-02d__gsap-target-2" class="bp-sandbox__object-large" style="top: 130px">2</div>
+                </div>
+                <div class="button-container">
+                    <button id="item-02d__reset" class="button-alt" type="button">Reset</button>
+                    <button id="item-02d__play-1" class="button-std" type="button">Play .to()</button>
+                    <button id="item-02d__play-2" class="button-std" type="button">Play .fromTo()</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03-A -->
+    <section class="step-container">
+        <h2><span>ITEM</span> <span class="header-number">03-A</span> <span>Stagger</span></h2>
+        <div class="bp-card bp-card__body fly-right">
+            <div class="bp-card__topic-container">
+                <span class="bp-card__topic-list">item 03-A • Animating Groups</span>
+                <span class="bp-card__topic-list bold-right">via stagger</span>
+            </div>
+            <div class="bp-card__primary-content">
+                <p class="code-title">edit: scripts/3A.js</p>
+                <h3 class="bp-card__title">Animating Groups: stagger</h3>
+                <p>When it works: Play lifts the five small boxes one after another like a wave, and Reset drops them back down.</p>
+                <div class="bp-sandbox">
+                    <div class="bp-sandbox__object-small--row">
+                        <div class="bp-sandbox__object-small item-03a__gsap-target"></div>
+                        <div class="bp-sandbox__object-small item-03a__gsap-target"></div>
+                        <div class="bp-sandbox__object-small item-03a__gsap-target"></div>
+                        <div class="bp-sandbox__object-small item-03a__gsap-target"></div>
+                        <div class="bp-sandbox__object-small item-03a__gsap-target"></div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button id="item-03a__reset" class="button-alt" type="button">Reset</button>
+                    <button id="item-03a__play" class="button-std" type="button">Play</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03-B -->
+    <section class="step-container">
+        <h2><span>ITEM</span> <span class="header-number">03-B</span> <span>Ease Animations</span></h2>
+        <div class="bp-card bp-card__body fly-right">
+            <div class="bp-card__topic-container">
+                <span class="bp-card__topic-list">item 03-B • Easing</span>
+                <span class="bp-card__topic-list bold-right">via ease</span>
+            </div>
+            <div class="bp-card__primary-content">
+                <p class="code-title">edit: scripts/3B.js</p>
+                <h3 class="bp-card__title">Changing the Feel: ease</h3>
+                <p>When it works: Play sends both boxes across in the same amount of time, with box 1 at a steady speed and box 2 using an ease you pick, and Reset snaps both back.</p>
+                <div class="bp-sandbox" style="height: 200px">
+                    <div id="item-03b__gsap-target-1" class="bp-sandbox__object-large">1</div>
+                    <div id="item-03b__gsap-target-2" class="bp-sandbox__object-large" style="top: 130px">2</div>
+                </div>
+                <div class="button-container">
+                    <button id="item-03b__reset" class="button-alt" type="button">Reset</button>
+                    <button id="item-03b__play" class="button-std" type="button">Play</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

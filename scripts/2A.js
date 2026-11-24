@@ -1,8 +1,9 @@
+// ==========================================================
+// Item 02-A: gsap.to() practice
+// ==========================================================
+
 (function(){
     "use strict"
-    // ==========================================================
-    // Item 02-A: gsap.to() demo, a new tween is made on each click
-    // ==========================================================
     const target = "#item-02__gsap-target";
     const distanceSelect = document.getElementById("item-02__distance");
 

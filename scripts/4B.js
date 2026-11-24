@@ -24,10 +24,10 @@
         smooth: `scrub: 1`
     };
 
-    let tween;
+    let demoScrollTrigger;
 
-    function buildTween(mode) {
-        tween = gsap.to(target, {
+    function buildDemoScrollTrigger(mode) {
+        demoScrollTrigger = gsap.to(target, {
             x: 200,
             rotation: 360,
             duration: 1,
@@ -43,16 +43,16 @@
         });
     }
 
-    buildTween(modeSelect.value);
+    buildDemoScrollTrigger(modeSelect.value);
 
     // on change handler
     modeSelect.addEventListener("change", function () {
-        tween.scrollTrigger.kill();
-        tween.kill();
+        demoScrollTrigger.scrollTrigger.kill();
+        demoScrollTrigger.kill();
         gsap.set(target, { x: 0, rotation: 0 });
         scroller.scrollTop = 0;
 
-        buildTween(this.value);
+        buildDemoScrollTrigger(this.value);
 
         const code = document.getElementById("item-04b__code");
         code.innerHTML = `&lt;script&gt;

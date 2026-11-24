@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
     <!-- ScrollSmoother requires ScrollTrigger -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"></script>
@@ -17,7 +16,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
 
     <!-- Custom scripts for cards -->
-
     <script src="./scripts/smooth.js" defer></script>
     <script src="./scripts/2A.js" defer></script>
     <script src="./scripts/2B.js" defer></script>
@@ -32,7 +30,7 @@
     <div id="grid-bg"></div>
     <div id="smooth-wrapper">
         <div id="smooth-content">
-            <div class="bp-card">
+            <div class="bp-card title">
                 <div class="title-card__main">
         
                     <span class="bp-card__topic-list">tutorial • GSAP animations</span>
@@ -41,7 +39,7 @@
                         GSAP is a wonderful animation library used by award-winning websites and the biggest companies in the world. It can let you manipulate the DOM with incredible precision and turn a static page into a carefully choreographed set-piece. 
                     </p>
                     <p>
-                        Much like jQuery, you can do many of the things GSAP does with vanilla JavaScript and CSS, but again, much like jQuery, you'll find yourself writing a lot more code to do the same thing as GSAP, and you are missing out on a wonderful array of plugins that speed up your work and let you do things that might otherwise be inaccessible.
+                        Much like jQuery, you can do many of the things GSAP does with vanilla JavaScript and CSS, but again, much like jQuery, you'll find yourself writing a lot more code to do the same thing as GSAP, and you will miss out on a wonderful array of plugins that speed up your work and let you do things that might otherwise be inaccessible.
                     </p>
                     <p>
                         Mind you, this is more than just a jQuery .animate() clone! Unlike jQuery's .animate() library, GSAP has native hardware acceleration for smooth 60+fps animations timed to refresh rate, it can natively touch properties that .animate() cannot without by-frame JavaScript calculations, and it has animation timelines to choreograph complex chains of animations. If you want complex, smooth animations, then GSAP is the library for you!
@@ -54,7 +52,7 @@
                     </div>
                     <div class="bp-card__footer-item">
                         <div class="bp-card__footer-label">rev</div>
-                        <div class="bp-card__footer-value">C</div>
+                        <div class="bp-card__footer-value">D</div>
                     </div>
                     <div class="bp-card__footer-item">
                         <div class="bp-card__footer-label">library</div>
@@ -62,7 +60,7 @@
                     </div>
                     <div class="bp-card__footer-item">
                         <div class="bp-card__footer-label">publish date</div>
-                        <div class="bp-card__footer-value">11-22-2026</div>
+                        <div class="bp-card__footer-value">11-23-2026</div>
                     </div>
                 </div>
             </div>
@@ -71,7 +69,7 @@
                 <h2><span>STEP</span> <span class="header-number">01</span> <span>INSTALLING GSAP</span></h2>
         
                 <div class="step-cards">
-                <!-- first card for step 01 -->
+
                 <div class="bp-card">
                     <div class="bp-card__body">
                         <div class="bp-card__topic-container">
@@ -81,20 +79,18 @@
                         <div class="bp-card__primary-content">
                             <h3 class="bp-card__title">Installing the GSAP Library</h3>
                             <p>
-                                In this lesson, we may not be building an award-winning website, but we are going to get a solid grasp of the core GSAP functions, try out some animations that would be difficult in jQuery, some animations that would be difficult in CSS, and we will put together some of what we learned to make our web page a little livelier.
+                                In this lesson, we may not be building an award-winning website, but we are going to get a solid grasp of the core GSAP functions, try out some animations that would be difficult in jQuery or pure CSS, and we will put together some of what we learned to make our web page a little livelier.
                             </p>
                             <p>
-                                For this lesson, we will rely on a CDN to deliver the GSAP library. Copy and paste these script tags inside the &lt;head&gt; of your starter file, right after the stylesheet link:
+                                For this lesson, we will rely on a CDN to deliver the GSAP library. Copy and paste the script tag inside the &lt;head&gt; of your starter file, right after the stylesheet link. Put it before the custom scripts, even though they're deferred, as it's a good habit to maintain:
                             </p>
                             <figure>
                                 <p class="code-title">index.html</p>
                                 <pre><code class="language-html">&lt;head&gt;
-            ...
-            &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"&gt;&lt;/script&gt;
-            &lt;!-- GSAP Plugins we will also use --&gt;
-            &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"&gt;&lt;/script&gt;
-            &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"&gt;&lt;/script&gt;
-        &lt;/head&gt;</code></pre>
+...
+    &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"&gt;&lt;/script&gt;
+...
+&lt;/head&gt;</code></pre>
                             </figure>
                         </div>
                     </div>
@@ -133,8 +129,8 @@
                                 </div>
                                 <figure>
                                 <pre><code id="item-02__code" class="language-html">&lt;script&gt;
-           gsap.to(".box", { x: 200 })
-        &lt;/script&gt;</code></pre>
+    gsap.to(".box", { x: 200 })
+&lt;/script&gt;</code></pre>
                                 </figure>
                             </div>
         
@@ -154,12 +150,46 @@
                                     </select>
                                 </p>
                             </div>
-        
+
                         </div>
+                        <details>
+                            <summary>
+                                <span class="summary__label">Challenge 02-A (click for answer)</span>
+                                <p>Open scripts/2A.js and:</p>
+                                <ol>
+                                    <li>Make the box move 200px to the right using the .to() function.</li>
+                                    <li>Configure the reset button so the box moves back to its original position on click.</li>
+                                </ol>
+                            </summary>
+                            <div class="details__content">
+                                <figure>
+                                    <p class="code-title">2A.js Answer:</p>
+                                    <pre><code class="language-javascript">document.getElementById("item-02__play").addEventListener("click", function () {
+    gsap.to(target, { x: 200 });
+});
+
+document.getElementById("item-02__reset").addEventListener("click", function () {
+    gsap.to(target, { x: 0 });
+});</code></pre>
+                                </figure>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span class="summary__label">Hint 1 (Moving elements with GSAP)</span></summary>
+                            <div class="details__content">
+                                <p>Your target has already been selected for you. Which property in the example above moves the box left and right?</p>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span class="summary__label">Hint 2 (Resetting an animation)</span></summary>
+                            <div class="details__content">
+                                <p>Reset can be tricky to conceptualize.</p>
+                                <p>Set the example above to 200px, and play it. Now set it to 50px. What did it do? More importantly, why did it do it? If you can explain what is happening here, you are one step away from resetting the box to it's original position.</p>
+                            </div>
+                        </details>
                     </div>
                 </div>
-        
-                <!-- second card for step 02 -->
+
                 <div class="bp-card">
                     <div class="bp-card__body">
                         <div class="bp-card__topic-container">
@@ -170,7 +200,7 @@
                             <h3 class="bp-card__title">Adding Rotation: gsap.to()</h3>
                             <div>
                                 <p>
-                                    One tween can animate more than one property at a time. Add a rotation value to an object with a move value and GSAP will work out the animation all on its own to move and spin the box together, finishing both at the same moment.
+                                    Half the problem is the exact same as 02-A was, so what is different here?
                                 </p>
                                 <p>
                                     Rotation is measured in degrees. Positive values turn the box clockwise, and you can see the effects in the demo below. 
@@ -185,8 +215,8 @@
                                 </div>
                                 <figure>
                                 <pre><code id="item-02b__code" class="language-html">&lt;script&gt;
-           gsap.to(".box", { x: 200, rotation: 90 })
-        &lt;/script&gt;</code></pre>
+  gsap.to(".box", { x: 200, rotation: 90 })
+&lt;/script&gt;</code></pre>
                                 </figure>
                             </div>
         
@@ -212,11 +242,39 @@
                                     </select>
                                 </p>
                             </div>
-        
+
                         </div>
+                        <details>
+                            <summary>
+                                <span class="summary__label">Challenge 02-B (click for answer)</span>
+                                <p>Open scripts/2B.js and:</p>
+                                <ol>
+                                    <li>Make the box move 100px to the right and spin 360 degrees using the .to() function.</li>
+                                    <li>Configure the reset button so the box moves back to its original position with no spin on click.</li>
+                                </ol>
+                            </summary>
+                            <div class="details__content">
+                                <figure>
+                                    <p class="code-title">2B.js Answer:</p>
+                                    <pre><code class="language-javascript">document.getElementById("item-02b__play").addEventListener("click", function () {
+    gsap.to(target, { x: 100, rotation: 360 });
+});
+
+document.getElementById("item-02b__reset").addEventListener("click", function () {
+    gsap.to(target, { x: 0, rotation: 0 });
+});</code></pre>
+                                </figure>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span class="summary__label">Hint 1</span></summary>
+                            <div class="details__content">
+                                <p>One animation, or a 'tween,'' can change more than one property. Look at the example and follow suit, with multiple properties modified simultaneously.</p>
+                            </div>
+                        </details>
                     </div>
                 </div>
-                <!-- third card for step 02 -->
+
                 <div class="bp-card">
                     <div class="bp-card__body">
                         <div class="bp-card__topic-container">
@@ -242,8 +300,8 @@
                                 </div>
                                 <figure>
                                 <pre><code id="item-02c__code" class="language-html">&lt;script&gt;
-           gsap.from(".box", { x: 200 })
-        &lt;/script&gt;</code></pre>
+    gsap.from(".box", { x: 200 })
+&lt;/script&gt;</code></pre>
                                 </figure>
                             </div>
         
@@ -262,11 +320,39 @@
                                     </select>
                                 </p>
                             </div>
-        
+
                         </div>
+                        <details>
+                            <summary>
+                                <span class="summary__label">Challenge 02-C (click for answer)</span>
+                                <p>Open scripts/2C.js and:</p>
+                                <ol>
+                                    <li>Make the box start 200px to the right and slide back to its original position using the .from() function.</li>
+                                    <li>Configure the reset button so the box moves back to its original position on click.</li>
+                                </ol>
+                            </summary>
+                            <div class="details__content">
+                                <figure>
+                                    <p class="code-title">2C.js Answer:</p>
+                                    <pre><code class="language-javascript">document.getElementById("item-02c__play").addEventListener("click", function () {
+    gsap.from(target, { x: 200 });
+});
+
+document.getElementById("item-02c__reset").addEventListener("click", function () {
+    gsap.to(target, { x: 0 });
+});</code></pre>
+                                </figure>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span class="summary__label">Hint 1</span></summary>
+                            <div class="details__content">
+                                <p>With .from(), the numbers you give are where the box starts its animation, not where it ends.</p>
+                            </div>
+                        </details>
                     </div>
                 </div>
-                <!-- fourth card for step 02 -->
+                
                 <div class="bp-card">
                     <div class="bp-card__body">
                         <div class="bp-card__topic-container">
@@ -277,7 +363,7 @@
                             <h3 class="bp-card__title">Start to Finish: gsap.fromTo()</h3>
                             <div>
                                 <p>
-                                    You might have noticed that the play button in the examples so far only works for one click before needing to be reset. That is because the .to() function will compare where the object's current state is with the final state you defined for it, and it will animate the intermediate frames to get to that change. If it's already at it's final state, there's nothing to animate!
+                                    You might have noticed that the play button in the examples so far only works for one click before needing to be reset. That is because the .to() function will compare where the object's current state is with the final state you defined for it, and it will animate the intermediate frames to get to that change. If it's already at it's final state (ex: shifted right 50px and told to go to 50px), there's nothing to animate!
                                 </p>
                                 <p>
                                     If we want to give the object a defined animation that plays out consistently every time, we want to use something that defines a consistent start state and end state. For that, we have the fromTo() function.
@@ -295,9 +381,9 @@
                                 </div>
                                 <figure>
                                 <pre><code id="item-02d__code" class="language-html">&lt;script&gt;
-           gsap.to(".box__1", { x: 200 })
-           gsap.fromTo(".box__2", { x: 0 }, { x: 200 })
-        &lt;/script&gt;</code></pre>
+  gsap.to(".box__1", { x: 200 })
+  gsap.fromTo(".box__2", { x: 0 }, { x: 200 })
+&lt;/script&gt;</code></pre>
                                 </figure>
                             </div>
         
@@ -312,8 +398,42 @@
                                     <button id="item-02d__play-2" class="button-std" type="button">Play .fromTo()</button>
                                 </p>
                             </div>
-        
+                            
                         </div>
+                        <details>
+                            <summary>
+                                <span class="summary__label">Challenge 02-D (click for answer)</span>
+                                <p>Open script/2D.js and:</p>
+                                <ol>
+                                    <li>Make box 1 move 200px to the right using the .to() function.</li>
+                                    <li>Make box 2 move 200px to the right using the .fromTo() function.</li>
+                                    <li>Configure the reset button so both boxes reset to their original position on click.</li>
+                                </ol>
+                            </summary>
+                            <div class="details__content">
+                                <figure>
+                                    <p class="code-title">2D.js Answer:</p>
+                                    <pre><code class="language-javascript">document.getElementById("item-02d__play-1").addEventListener("click", function () {
+    gsap.to(target1, { x: 200 });
+});
+
+document.getElementById("item-02d__play-2").addEventListener("click", function () {
+    gsap.fromTo(target2, { x: 0 }, { x: 200 });
+});
+
+document.getElementById("item-02d__reset").addEventListener("click", function () {
+    gsap.to(target1, { x: 0 });
+    gsap.to(target2, { x: 0 });
+});</code></pre>
+                                </figure>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span class="summary__label">Hint 1 (Improving the reset)</span></summary>
+                            <div class="details__content">
+                                Don't forget that Reset is moving two boxes this time. Twice the work means twice the lines of code...
+                            </div>
+                        </details>
                     </div>
                 </div>
                 </div>
@@ -322,7 +442,7 @@
                 <h2><span>STEP</span> <span class="header-number">03</span> <span>Pacing Animations</span></h2>
         
                 <div class="step-cards">
-                <!-- first card for step 03 -->
+                    
                 <div class="bp-card">
                     <div class="bp-card__body">
                         <div class="bp-card__topic-container">
@@ -352,8 +472,8 @@
                                 </div>
                                 <figure>
                                 <pre><code id="item-03a__code" class="language-html">&lt;script&gt;
-           gsap.to(".box", { y: -30, stagger: 0.1 })
-        &lt;/script&gt;</code></pre>
+    gsap.to(".box", { y: -30, stagger: 0.1 })
+&lt;/script&gt;</code></pre>
                                 </figure>
                             </div>
         
@@ -375,10 +495,43 @@
                             </div>
         
                         </div>
+                        <details>
+                            <summary>
+                                <span class="summary__label">Challenge 03-A (click for answer)</span>
+                                <p>Open scripts/3A.js and:</p>
+                                <ol>
+                                    <li>Make all five boxes move up 30px, one after another, 0.1 seconds apart using stagger.</li>
+                                    <li>Configure the reset button so all five boxes move back down to their original position on click.</li>
+                                </ol>
+                            </summary>
+                            <div class="details__content">
+                                <figure>
+                                    <p class="code-title">3A.js Answer:</p>
+                                    <pre><code class="language-javascript">document.getElementById("item-03a__play").addEventListener("click", function () {
+    gsap.to(targets, { y: -30, stagger: 0.1 });
+});
+
+document.getElementById("item-03a__reset").addEventListener("click", function () {
+    gsap.to(targets, { y: 0 });
+});</code></pre>
+                                </figure>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span class="summary__label">Hint 1 (animation direction)</span></summary>
+                            <div class="details__content">
+                                <p>This is the first time you are manipulating x instead of y. Don't forget that up is a negative y value, since y counts down from the top of the page.</p>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span class="summary__label">Hint 2 (staggering)</span></summary>
+                            <div class="details__content">
+                                <p>The script already selected your target for you, look closely at the example and determine how we animate each element at a separate timing.</p>
+                            </div>
+                        </details>
                     </div>
                 </div>
-        
-                <!-- second card for step 03 -->
+
                 <div class="bp-card">
                     <div class="bp-card__body">
                         <div class="bp-card__topic-container">
@@ -410,9 +563,9 @@
                                 </div>
                                 <figure>
                                 <pre><code id="item-03b__code" class="language-html">&lt;script&gt;
-           gsap.to(".box__1", { x: 200, duration: 1, ease: "none" })
-           gsap.to(".box__2", { x: 200, duration: 1, ease: "power1.out" })
-        &lt;/script&gt;</code></pre>
+    gsap.to(".box__1", { x: 200, duration: 1, ease: "none" })
+    gsap.to(".box__2", { x: 200, duration: 1, ease: "power1.out" })
+&lt;/script&gt;</code></pre>
                                 </figure>
                             </div>
         
@@ -437,11 +590,42 @@
                             </div>
         
                         </div>
+                        <details>
+                            <summary>
+                                <span class="summary__label">Challenge 03-B (click for answer)</span>
+                                <p>Open scripts/3B.js and:</p>
+                                <ol>
+                                    <li>Make box 1 go from 0px to 200px to the right over 1 second with no ease using the .fromTo() function.</li>
+                                    <li>Make box 2 do the same move, but with bounce.out as its ease.</li>
+                                    <li>Configure the reset button so both boxes move back to their original position on click.</li>
+                                </ol>
+                            </summary>
+                            <div class="details__content">
+                                <figure>
+                                    <p class="code-title">3B.js Answer:</p>
+                                    <pre><code class="language-javascript">document.getElementById("item-03b__play").addEventListener("click", function () {
+    gsap.fromTo(target1, { x: 0 }, { x: 200, duration: 1, ease: "none" });
+    gsap.fromTo(target2, { x: 0 }, { x: 200, duration: 1, ease: "bounce.out" });
+});
+
+document.getElementById("item-03b__reset").addEventListener("click", function () {
+    gsap.to(target1, { x: 0 });
+    gsap.to(target2, { x: 0 });
+});</code></pre>
+                                </figure>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span class="summary__label">Hint 1 (setting duration/ease)</span></summary>
+                            <div class="details__content">
+                                <p>duration and ease are just more properties like x, rotation, or stagger. They go in the same { } as x, and the ease value goes in quotes.</p>
+                            </div>
+                        </details>
                     </div>
                 </div>
                 </div>
             </div>
-            
+
             <div class="step-container alt">
                 <h2><span>STEP</span> <span class="header-number">04</span> <span>USING PLUG-INS</span></h2>
                 
@@ -459,7 +643,7 @@
                                     Much like jQuery, GSAP has an array of plugins that extend what it can do and enable things that, while possible in vanilla javascript, are immensely easier to pull off once added in.
                                 </p>
                                 <p>
-                                    GSAP plug-ins will let you do stuff like add even more ease options than what the last card showed you (CustomeEase), let you animate SVGs to look as if they were drawn right onto the page (DrawSVG), or you can set all your GSAP animations to trigger at scrollpoints on the screen with ScrollTrigger
+                                    GSAP plug-ins will let you do stuff like add even more ease options than what the last card showed you (CustomEase), let you animate SVGs to look as if they were drawn right onto the page (DrawSVG), or you can set all your GSAP animations to trigger at scrollpoints on the screen with ScrollTrigger
                                 </p>
                                 <p>
                                     As a reminder, we included more than one CDN at the beginning of this lesson. Please verify you put all three of them at the top of your page before moving on.
@@ -469,12 +653,11 @@
                             <figure>
                                 <p class="code-title">index.html</p>
                                 <pre><code class="language-html">&lt;head&gt;
-            ...
-            &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"&gt;&lt;/script&gt;
-            &lt;!-- GSAP Plugins we will also use --&gt;
-            &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"&gt;&lt;/script&gt;
-            &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"&gt;&lt;/script&gt;
-        &lt;/head&gt;</code></pre>
+    ...
+    &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"&gt;&lt;/script&gt;
+    &lt;!-- GSAP Plugin we will also use --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
                             </figure>
         
         
@@ -498,7 +681,6 @@
                     </div>
                 </div>
         
-                <!-- second card for step 04 -->
                 <div class="bp-card">
                     <div class="bp-card__body">
                         <div class="bp-card__topic-container">
@@ -509,10 +691,10 @@
                             <h3 class="bp-card__title">Animating on Scroll: ScrollTrigger</h3>
                             <div>
                                 <p>
-                                    ScrollTrigger connects a tween to a scroll position. Instead of a button starting the animation, the animation starts when its trigger element scrolls past an invisible start line, and finishes at an invisible end line.
+                                    ScrollTrigger connects an animation to a scroll position. Instead of a button starting the animation like in our examples, the animation starts when its trigger element scrolls past an invisible start line on the page, and finishes at an invisible end line.
                                 </p>
                                 <p>
-                                    You add it with a scrollTrigger object inside the tween. "trigger" is the element to watch, and "start" and "end" say where the lines are. For example, "top 80%" means the animation starts when the top of the trigger reaches 80% of the way down the scroll area. You will usually want the start to be below the end, as we scroll top to bottom on a page. to visually see the start and end, we can use markers: true during development to put lines visually on the page.
+                                    You add it with a ScrollTrigger object inside the GSAP animation function. "trigger" is the element to watch, and "start" and "end" say where the lines are. For example, "top 80%" means the animation starts when the top of the trigger reaches 80% of the way down the scroll area. You will usually want the start to be below the end, as we scroll top to bottom on a page. to visually see the start and end, we can use markers: true during development to put lines visually on the page.
                                 </p>
                                 <p>
                                     The demo below scrolls on its own, so scroll inside the box. Try the modes: "Play / reverse" plays the tween once it crosses the start line and reverses it when you scroll back up, "Scrub" ties the animation directly to your scrollbar, and "Smooth scrub" does the same but lets the box catch up over a second.
@@ -530,35 +712,95 @@
                                 </div>
                                 <figure>
                                 <pre><code id="item-04b__code" class="language-html">&lt;script&gt;
-           gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
         
-           gsap.to(".box", {
-              x: 200,
-              rotation: 360,
-              scrollTrigger: {
-                 trigger: ".box",
-                 scroller: ".sandbox",
-                 start: "top 80%",
-                 end: "top 20%",
-                 toggleActions: "play none none reverse",
-                 markers: true
-              }
-           })
-        &lt;/script&gt;</code></pre>
+    gsap.to(".box", {
+        x: 200,
+        rotation: 360,
+        scrollTrigger: {
+            trigger: ".box",
+            scroller: ".sandbox",
+            start: "top 80%",
+            end: "top 20%",
+            toggleActions: 
+                "play none none reverse",
+            markers: true
+        }
+    })
+&lt;/script&gt;</code></pre>
                                 </figure>
                             </div>
         
                             <div class="button-container">
                                 <p>
                                     <select id="item-04b__mode">
-                                        <option value="toggle" selected>Play / reverse</option>
+                                        <option value="toggle" selected>Play / Reverse</option>
                                         <option value="scrub">Scrub</option>
                                         <option value="smooth">Smooth scrub</option>
                                     </select>
                                 </p>
                             </div>
-        
+
                         </div>
+                        <details>
+                            <summary>
+                                <span class="summary__label">Challenge 04-B (click for answer)</span>
+                                <p>This one is going to bring everything we learned together and we will try recreating some of the effects on this page right on the practice document. Make sure you finished 4A and have ScrollTrigger linked on your HTML document.</p>
+                                <p>Open 4B.js and for every section, make the heading:</p>
+                                <ul>
+                                    <li>Fly into view from the left</li>
+                                    <li>Have its opacity change from 0 to its current opacity</li>
+                                    <li>Make each element in the h2 header have its animation staggered by 0.3 seconds</li>
+                                </ul>
+                                <p>This challenge is not about learning ScrollTrigger, but to explore GSAP plugins. with that in mind, we gave you the scrolltrigger properties right in the code for this one.</p>
+                            </summary>
+                            <div class="details__content">
+                                <figure>
+                                    <p class="code-title">4B.js Answer:</p>
+                                    <pre><code class="language-javascript">gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray("h2").forEach(function (header) {
+    const headerParts = header.children;
+
+    gsap.from(headerParts, {
+        x: -100,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.3,
+        scrollTrigger: {
+            trigger: header,
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+        }
+    });
+});</code></pre>
+                                </figure>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span class="summary__label">Hint 1 (choosing a function)</span></summary>
+                            <div class="details__content">
+                                <p>We want the headers to have the ending position be where they currently are on the page. Which GSAP function did we learn about that changes the starting position of an animation but not the ending position?</p>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span class="summary__label">Hint 2 (choosing a trigger)</span></summary>
+                            <div class="details__content">
+                                <p>Much of the ScrollTrigger properties in the example is similar to the final version we are building in out project, except we are stagger-animating a bunch of children elements instead of one element. Because of this, our trigger for the Scrolltrigger is not directly focused on the element, but parent header.</p>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span class="summary__label">Hint 3 (animation speed)</span></summary>
+                            <div class="details__content">
+                                <p>GSAP animations by default are a half second long at 'duration: 0.5'. Let's slow our animation down to 1 full second with the duration property.</p>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span class="summary__label">Extra Challenge?</span></summary>
+                            <div class="details__content">
+                                <p>Congrats making it this far! If you finished the prior parts, you may have noticed that you didn't need the commented out selector. That selector is for all of the challenge cards. Can you make those have the same animation from the other direction? What needs to change to make that occur? Duplicate your current answer and modify it to make the challenge cards fly in from the right!</p>
+                            </div>
+                        </details>
                     </div>
                 </div>
         
