@@ -885,3 +885,6 @@ p.code-title {
     font-family: var(--font-mono);
     letter-spacing: 0.04rem;
 }
+a {
+    color: var(--highlight);
+}
