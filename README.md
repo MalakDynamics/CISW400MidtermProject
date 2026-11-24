@@ -1,4 +1,4 @@
-# Blueprint Design System
+# CISW 400 Midterm Project
 
 GSAP playground for showing off animations and teaching users basics of GSAP, with custom CSS system built off the initial inspiration of the **Engineering Blueprint** background pattern. Most GSAP in project taught in class except for Header Pin technique and background parallax effect that was harder to teach within 15-30 minute time constraints.
 
